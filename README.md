@@ -4,19 +4,13 @@
 Cock (🐓) Block
 
 ## Game Summary
-**Art Style:**
-* ex: Party Hard
-* 2D fake, pixel art, 8-bit themed
-* 3D top-down view so player can see a large amount of the screen
-* Shadows/lighting for 3D aspect
-* Different rooms: bar, dance floor, bathroom, pool table/arcade room, tables, etc.
-
 **Gameplay:**
 * Inspiration: Untitled Goose Game
 * Puzzle based - through discovery and exploration
 * Possible multiple levels with several ways to finish
 * Difficulty increases with each level?
 * Each level (every night): cock-blocking a different couple?
+* Different rooms: bar, dance floor, bathroom, pool table/arcade room, tables, etc.
 * Ways to cock block
 * Getting too drunk, throwing up on people
 * Staring at a person for too long
