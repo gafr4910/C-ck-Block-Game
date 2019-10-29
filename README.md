@@ -1,47 +1,17 @@
-# C-ck Block Game
+# C*ck Block Game
 
 ## Game Name
 Cock (🐓) Block
 
 ## Game Summary
-**Gameplay:**
-* Inspiration: Untitled Goose Game
-* Puzzle based - through discovery and exploration
-* Possible multiple levels with several ways to finish
-* Difficulty increases with each level?
-* Each level (every night): cock-blocking a different couple?
-* Different rooms: bar, dance floor, bathroom, pool table/arcade room, tables, etc.
-* Ways to cock block
-* Getting too drunk, throwing up on people
-* Staring at a person for too long
-* Starting a fight
-* Interacting with the people
-* Bringing over “hotter” people, getting items from people, etc.
-* Blackmailing
-* Creating awkwardness
-* Messing up drinks, spilling drinks
-* Enemy to the player
-* Bouncer
-* Time (bar close)
-
-**Goals:**
-* Break up the couple
-* Don’t get caught by the bouncer
-* Don’t run out of time (bar closing time)
-* Earn points by getting different outcomes
-* Mini/side/extra missions?
-* Easter eggs?
-* Break up as many people in the bar vs. having a puzzle based game to break up one couple.
-* NPCs will have certain paths and reactions to events. Player can use some of these to their advantage to break up the couple.
-* NPCs have variety of specific personality traits that the player can take advantage of
-* Repeat events every certain amount of time (ex: every 10 minutes)
-* Special event at a specific time of night (ex: 1 AM)
-
 **Theme:**
-* Start of game: “There is Todd and Linda, We hate Todd and Linda”
-* Learns to love cock blocking people
-* Motivation: sadistic personality, etc.
-* Each level is the equivalent of one night, one level for now, with more difficult challenges as the player progresses
+Awww, there's Todd and Linda... F*ck Todd and Linda. Through stealth and puzzle solving, you must find a way to break up a couple at the bar every night. Can you break up every couple without being caught by the bouncer?
+
+**Gameplay:**
+Each level is a new night in the bar to break up a different couple. Every person in the bar has specific personality traits, paths, reactions, and items that the player can take advantage of. Interact with different people and explore different rooms of the bar to discover different ways to c*ck block, which could include getting too drunk and throwing up on people, staring at a person for too long and starting a fight, spilling drinks, blackmailing, and more. There are multiple ways to complete your objective and more difficult challenges as the player progresses. Earn points by getting different outcomes and rare items!
+
+**Similar Products:**
+Untitled Goose Game
 
 ## Team Members
 Gavin Frausto, Samuel Herwig, Rachel Slagle, Monica Chairez
