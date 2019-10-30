@@ -1,6 +1,6 @@
 # Process Documentation
 
-##Initial Brainstorming - 10.28.19
+## Initial Brainstorming - 10.28.19
 **Gameplay:**
 * Inspiration: Untitled Goose Game
 * Puzzle based - through discovery and exploration
@@ -27,7 +27,7 @@ NPCs have variety of specific personality traits that the player can take advant
 * Shadows/lighting for 3D aspect
 * Different rooms: bar, dance floor, bathroom, pool table/arcade room, tables, etc.
 
-##Values and Core Mechanic - 10.30.19
+## Values and Core Mechanic - 10.30.19
 **Core Values:**
 * Humor
 * Stealth/sneaky
@@ -42,4 +42,3 @@ NPCs have variety of specific personality traits that the player can take advant
 * Grab/hold (objects)
 * Hide (dancing, drinking, and blending)
 * Drinking
-- Keep drunk level up
