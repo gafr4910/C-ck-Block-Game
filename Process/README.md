@@ -1,6 +1,12 @@
 # Process Documentation
 
 ## Initial Brainstorming - 10.28.19
+**Theme:**
+* Start of game: “There is Todd and Linda, We hate Todd and Linda”, “Fuckin’ Todd….”
+* Learns to love cock blocking people
+* Motivation: sadistic personality, etc.
+* Each level is the equivalent of one night, one level for now, with more difficult challenges as the player progresses
+
 **Gameplay:**
 * Inspiration: Untitled Goose Game
 * Puzzle based - through discovery and exploration
@@ -13,12 +19,6 @@
 NPCs have variety of specific personality traits that the player can take advantage of
 * Repeat events every certain amount of time (ex: every 10 minutes)
 * Special event at a specific time of night (ex: 1 AM)
-
-**Theme:**
-* Start of game: “There is Todd and Linda, We hate Todd and Linda”, “Fuckin’ Todd….”
-* Learns to love cock blocking people
-* Motivation: sadistic personality, etc.
-* Each level is the equivalent of one night, one level for now, with more difficult challenges as the player progresses
 
 **Art Style:**
 * ex: Party Hard
