@@ -51,9 +51,11 @@ NPCs have variety of specific personality traits that the player can take advant
 * Sweatshirt
 * Jeans
 * Dad sneakers (large or small sneakers), compensates for his small feet by wearing shoes that are way too large
+
 **Dominant Character Traits:**
 1. Jealousy
 2. Angst
+
 **Back Story:**
 Jawsh is an almost average, C-student drop out from college. He works at a grocery store and attempts to stream Chutes and Ladders in his spare time. He’s going to meet his one and only friend, who co-owns a bar. He comes across Todd, who he met and hated in high school, along with his girlfriend Linda. He feels as though the universe has wronged him, and that Todd and Linda are rubbing it in his face so he has decided to ruin both of their nights.
 
@@ -64,9 +66,11 @@ Jawsh is an almost average, C-student drop out from college. He works at a groce
 * Khakis
 * Boat shoes
 * Large quads
+
 **Dominant Character Traits:**
 1. Nice publicly but has a snarky attitude
 2. Thinks he is better than main character
+
 **Back Story:**
 Todd met Jawsh back in college but doesn’t really remember him. There seems to be some kind of reason why Jawsh has never really liked him, but he is not quite sure why. Todd now is an ameteur cat herder, who makes a decent living. He enjoys collecting fine and exotic root beer bottles. He was an all B student, and was semi-athletic while playing JV lacrosse in high school, although had aspirations for varsity. His secret is that he absolutely loves to litter. He has never told anyone this, but he secretly hopes the fish in the ocean are dying from his plastic.
 
@@ -77,8 +81,10 @@ Todd met Jawsh back in college but doesn’t really remember him. There seems to
 * Red lipstick
 * Yellow dress
 * High heels but not too high
+
 **Dominant Character Traits:**
 1. Kind
 2. Gullible
+
 **Back Story:**
 Linda is a nice young woman, and met Todd through Linder (a dating app only for people named Linda that she helped develop). Linda was pretty but never pretty enough to be one of the most popular girls in school but had several friends who were. She went to college for English and now is at the bottom of a pyramid scheme for self beauty. She is a staunch environmentalist but only because people would be mad at her if she wasn’t. Her hobbies include sewing and selling pocket protectors on Etsy where she has gained a surprisingly large following. Additionally she was a top 3000 ping pong player in high school. She is allergic to root beer, or prefers root beer from a soda machine, while Todd thinks a soda machine root beer is a ghastly site at best.
