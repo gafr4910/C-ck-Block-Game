@@ -92,33 +92,33 @@ Linda is a nice young woman, and met Todd through Linder (a dating app only for 
 ## Progress Update - 11.20.19
 **Completed Tasks:**
 1. Picked the path and ending of the level we want to design and develop
-2. Developed player movement in Unity
+1. Developed player movement in Unity
   1. Control from WASD/arrows
-  2. Run and pick up animations
-  3. Space to interact with items
-  4. Shift to run (with animation)
-3. Set up map in Unity
+  1. Run and pick up animations
+  1. Space to interact with items
+  1. Shift to run (with animation)
+1. Set up map in Unity
   1. Gray box and layered gray box map
-  2. Walls and floors
-    1. Office
-    2. Break room
-    3. Kitchen
-    4. Bathroom 1
-    5. Bathroom 2
-    6. Dining area
-    7. Bar area
-4. Created interactable objects
+  1. Walls and floors
+  1. Office
+  1. Break room
+  1. Kitchen
+  1. Bathroom 1
+  1. Bathroom 2
+  1. Dining area
+  1. Bar area
+1. Created interactable objects
   1. Placed objects
-  2. Destroyed objects when interacted with
-5. Started making AI movement
+  1. Destroyed objects when interacted with
+1. Started making AI movement
   1. One person doing idle animations around bar
-6. Main character can now find and collect flowers
+1. Main character can now find and collect flowers
   1. Created gray box within map
-  2. Made MC able to interact with it
-  3. Disappears once interacted with
-  4. Added in flower sprite
-7. Started designing user interface
+  1. Made MC able to interact with it
+  1. Disappears once interacted with
+  1. Added in flower sprite
+1. Started designing user interface
   1. Found text box sprite
-  2. Found font(s) for text boxes
-  3. Put fonts inside text boxes
-  4. Have those text boxes appear when interacted with
+  1. Found font(s) for text boxes
+  1. Put fonts inside text boxes
+  1. Have those text boxes appear when interacted with
