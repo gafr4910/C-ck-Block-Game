@@ -92,12 +92,12 @@ Linda is a nice young woman, and met Todd through Linder (a dating app only for 
 ## Progress Update - 11.20.19
 **Completed Tasks:**
 - [x] Picked the path and ending of the level we want to design and develop
-2. Developed player movement in Unity
+- [x] Developed player movement in Unity
   * Control from WASD/arrows
   * Run and pick up animations
   * Space to interact with items
   * Shift to run (with animation)
-3. Set up map in Unity
+- [x] Set up map in Unity
   * Gray box and layered gray box map
   * Walls and floors
   * Office
@@ -107,17 +107,17 @@ Linda is a nice young woman, and met Todd through Linder (a dating app only for 
   * Bathroom 2
   * Dining area
   * Bar area
-4. Created interactable objects
+- [x] Created interactable objects
   * Placed objects
   * Destroyed objects when interacted with
-5. Started making AI movement
+- [x] Started making AI movement
   * One person doing idle animations around bar
-6. Main character can now find and collect flowers
+- [x] Main character can now find and collect flowers
   * Created gray box within map
   * Made MC able to interact with it
   * Disappears once interacted with
   * Added in flower sprite
-7. Started designing user interface
+- [x] Started designing user interface
   * Found text box sprite
   * Found font(s) for text boxes
   * Put fonts inside text boxes
