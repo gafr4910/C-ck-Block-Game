@@ -93,7 +93,7 @@ Linda is a nice young woman, and met Todd through Linder (a dating app only for 
 **Completed Tasks:**
 - [x] Picked the path and ending of the level we want to design and develop
 - [x] Developed player movement in Unity
-  * Control from WASD/arrows
+* Control from WASD/arrows
   * Run and pick up animations
   * Space to interact with items
   * Shift to run (with animation)
