@@ -91,13 +91,15 @@ Linda is a nice young woman, and met Todd through Linder (a dating app only for 
 
 ## Progress Update - 11.20.19
 **Completed Tasks:**
+- [x] Found art assets for characters and sprite animations
+- [x] Mapped out game environment (bar)
 - [x] Picked the path and ending of the level we want to design and develop
 ![Diagram of Game Level](https://i.imgur.com/0xhv3Eh.png)
 - [x] Developed player movement in Unity
   * Control from WASD/arrows
-  * Run and pick up animations
   * Space to interact with items
-  * Shift to run (with animation)
+  * Shift to run
+  * Run and pick up animations
 - [x] Set up map in Unity
   * Gray box and layered gray box map
   * Walls and floors
@@ -108,11 +110,13 @@ Linda is a nice young woman, and met Todd through Linder (a dating app only for 
   * Bathroom 2
   * Dining area
   * Bar area
+![Current Map in Unity](https://i.imgur.com/6lFvLaT.png)
 - [x] Created interactable objects
   * Placed objects
   * Destroyed objects when interacted with
 - [x] Started making AI movement
   * One person doing idle animations around bar
+![AI Movement in Unity](https://i.imgur.com/OldiJ1P.png)
 - [x] Main character can now find and collect flowers
   * Created gray box within map
   * Made MC able to interact with it
@@ -122,4 +126,11 @@ Linda is a nice young woman, and met Todd through Linder (a dating app only for 
   * Found text box sprite
   * Found font(s) for text boxes
   * Put fonts inside text boxes
-  * Have those text boxes appear when interacted with
+  * Have those text boxes appear when interacted with in Unity
+![User Interact with Text Box](https://i.imgur.com/OVdVwwO.png)
+
+**Next Tasks:**
+- [ ] Work more on AI Movement
+- [ ] Create waiter outfit (new sprite)
+- [ ] Find/make more item art
+- [ ] Develop more map areas
