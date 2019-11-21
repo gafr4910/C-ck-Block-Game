@@ -88,3 +88,37 @@ Todd met Jawsh back in college but doesn’t really remember him. There seems to
 
 **Back Story:**
 Linda is a nice young woman, and met Todd through Linder (a dating app only for people named Linda that she helped develop). Linda was pretty but never pretty enough to be one of the most popular girls in school but had several friends who were. She went to college for English and now is at the bottom of a pyramid scheme for self beauty. She is a staunch environmentalist but only because people would be mad at her if she wasn’t. Her hobbies include sewing and selling pocket protectors on Etsy where she has gained a surprisingly large following. Additionally she was a top 3000 ping pong player in high school. She is allergic to root beer, or prefers root beer from a soda machine, while Todd thinks a soda machine root beer is a ghastly site at best.
+
+## Progress Update - 11.20.19
+**Completed Tasks:**
+1. Picked the path and ending of the level we want to design and develop
+2. Developed player movement in Unity
+  1. Control from WASD/arrows
+  2. Run and pick up animations
+  3. Space to interact with items
+  4. Shift to run (with animation)
+3. Set up map in Unity
+  1. Gray box and layered gray box map
+  2. Walls and floors
+    1. Office
+    2. Break room
+    3. Kitchen
+    4. Bathroom 1
+    5. Bathroom 2
+    6. Dining area
+    7. Bar area
+4. Created interactable objects
+  1. Placed objects
+  2. Destroyed objects when interacted with
+5. Started making AI movement
+  1. One person doing idle animations around bar
+6. Main character can now find and collect flowers
+  1. Created gray box within map
+  2. Made MC able to interact with it
+  3. Disappears once interacted with
+  4. Added in flower sprite
+7. Started designing user interface
+  1. Found text box sprite
+  2. Found font(s) for text boxes
+  3. Put fonts inside text boxes
+  4. Have those text boxes appear when interacted with
