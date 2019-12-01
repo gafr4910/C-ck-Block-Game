@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject[] Items;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
