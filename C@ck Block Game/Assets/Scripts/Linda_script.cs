@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarScript : MonoBehaviour
+public class Linda_script : MonoBehaviour
 {
 
     private Animator anim;
@@ -88,14 +88,14 @@ public class BarScript : MonoBehaviour
         }
 
 
-       //else if(triggered && position == dest && dest2!=null)
-       // {
-       //     Debug.Log("nice");
-       //     position = gameObject.transform.position;
-       //     float step = Time.deltaTime * speed;
-       //     transform.position = Vector2.MoveTowards(transform.position, dest2, step);
+        //else if(triggered && position == dest && dest2!=null)
+        // {
+        //     Debug.Log("nice");
+        //     position = gameObject.transform.position;
+        //     float step = Time.deltaTime * speed;
+        //     transform.position = Vector2.MoveTowards(transform.position, dest2, step);
 
-       // }
+        // }
 
 
 
@@ -161,11 +161,8 @@ public class BarScript : MonoBehaviour
     {
         System.Random ran = new System.Random();
         int i = ran.Next(0, 3);
-
         //Vector2 temp = new Vector2();
-
         int count = 0;
-
         if (i == 0)
         {
             //vecArray[0] = new Vector2(0f, 0f);
@@ -174,16 +171,13 @@ public class BarScript : MonoBehaviour
 
             count = 0;
 
-
         }
 
         else if (i == 1)
         {
             //vecArray[1] = new Vector2(5f, 5f);
-
             vecArray[1] = position2;
             count = 1;
-
 
         }
         else if (i == 2)

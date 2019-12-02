@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarScript : MonoBehaviour
+public class Formal_script : MonoBehaviour
 {
 
     private Animator anim;
@@ -88,14 +88,14 @@ public class BarScript : MonoBehaviour
         }
 
 
-       //else if(triggered && position == dest && dest2!=null)
-       // {
-       //     Debug.Log("nice");
-       //     position = gameObject.transform.position;
-       //     float step = Time.deltaTime * speed;
-       //     transform.position = Vector2.MoveTowards(transform.position, dest2, step);
+        //else if(triggered && position == dest && dest2!=null)
+        // {
+        //     Debug.Log("nice");
+        //     position = gameObject.transform.position;
+        //     float step = Time.deltaTime * speed;
+        //     transform.position = Vector2.MoveTowards(transform.position, dest2, step);
 
-       // }
+        // }
 
 
 
