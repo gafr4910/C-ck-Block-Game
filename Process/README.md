@@ -88,3 +88,49 @@ Todd met Jawsh back in college but doesn’t really remember him. There seems to
 
 **Back Story:**
 Linda is a nice young woman, and met Todd through Linder (a dating app only for people named Linda that she helped develop). Linda was pretty but never pretty enough to be one of the most popular girls in school but had several friends who were. She went to college for English and now is at the bottom of a pyramid scheme for self beauty. She is a staunch environmentalist but only because people would be mad at her if she wasn’t. Her hobbies include sewing and selling pocket protectors on Etsy where she has gained a surprisingly large following. Additionally she was a top 3000 ping pong player in high school. She is allergic to root beer, or prefers root beer from a soda machine, while Todd thinks a soda machine root beer is a ghastly site at best.
+
+## Progress Update - 11.20.19
+**Completed Tasks:**
+- [x] Found art assets for characters and sprite animations
+- [x] Mapped out game environment (bar)
+- [x] Picked the path and ending of the level we want to design and develop
+![Diagram of Game Level](https://i.imgur.com/0xhv3Eh.png)
+- [x] Developed player movement in Unity
+  * Control from WASD/arrows
+  * Space to interact with items
+  * Shift to run
+  * Run and pick up animations
+- [x] Set up map in Unity
+  * Gray box and layered gray box map
+  * Walls and floors
+  * Office
+  * Break room
+  * Kitchen
+  * Bathroom 1
+  * Bathroom 2
+  * Dining area
+  * Bar area
+![Current Map in Unity](https://i.imgur.com/6lFvLaT.png)
+- [x] Created interactable objects
+  * Placed objects
+  * Destroyed objects when interacted with
+- [x] Started making AI movement
+  * One person doing idle animations around bar
+![AI Movement in Unity](https://i.imgur.com/OldiJ1P.png)
+- [x] Main character can now find and collect flowers
+  * Created gray box within map
+  * Made MC able to interact with it
+  * Disappears once interacted with
+  * Added in flower sprite
+- [x] Started designing user interface
+  * Found text box sprite
+  * Found font(s) for text boxes
+  * Put fonts inside text boxes
+  * Have those text boxes appear when interacted with in Unity
+![User Interact with Text Box](https://i.imgur.com/OVdVwwO.png)
+
+**Next Tasks:**
+- [ ] Work more on AI Movement
+- [ ] Create waiter outfit (new sprite)
+- [ ] Find/make more item art
+- [ ] Develop more map areas
