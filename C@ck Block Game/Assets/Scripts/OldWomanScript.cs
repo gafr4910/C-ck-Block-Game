@@ -15,10 +15,13 @@ public class OldWomanScript : MonoBehaviour
 	public Vector2 dest;
 	public Vector2 dest2;
 
-	public Vector2 position1;
-	public Vector2 position2;
-	public Vector2 position3;
-	public Vector2 position4;
+    public Vector2[] positions;
+    public Vector2[] destinations; 
+
+ //   public Vector2 position1;
+	//public Vector2 position2;
+	//public Vector2 position3;
+	//public Vector2 position4;
 
 	//public float maxDistanceFromWall = .1f;
 	//public float moveForce = 40f;
@@ -64,6 +67,8 @@ public class OldWomanScript : MonoBehaviour
 			// anim.CrossFade("Old_Man_Walk", 0);
 			transform.position = Vector2.MoveTowards(transform.position, target, step);
 
+
+            //For loop for all of the destination points and create a vector of destinations 
 			//Debug.Log("shit");
 		}
 
@@ -78,12 +83,16 @@ public class OldWomanScript : MonoBehaviour
 
 			StopCoroutine("MoveManager");
 
-			//Debug.Log("here");
 
-			position = gameObject.transform.position;
-			float step = Time.deltaTime * speed;
+            for (int i = 0; i < destinations.Length; i++)
+            {
+                //Debug.Log("here");
 
-			transform.position = Vector2.MoveTowards(transform.position, dest, step);
+                position = gameObject.transform.position;
+                float step = Time.deltaTime * speed;
+
+                transform.position = Vector2.MoveTowards(transform.position, destinations[i], step);
+            }
 
 		}
 
@@ -170,7 +179,7 @@ public class OldWomanScript : MonoBehaviour
 		{
 			//vecArray[0] = new Vector2(0f, 0f);
 
-			vecArray[0] = position1;
+			vecArray[0] = positions[0];
 
 			count = 0;
 
@@ -181,7 +190,7 @@ public class OldWomanScript : MonoBehaviour
 		{
 			//vecArray[1] = new Vector2(5f, 5f);
 
-			vecArray[1] = position2;
+			vecArray[1] = positions[1];
 			count = 1;
 
 
@@ -189,7 +198,7 @@ public class OldWomanScript : MonoBehaviour
 		else if (i == 2)
 		{
 			//vecArray[2] = new Vector2(5f, 0f);
-			vecArray[2] = position3;
+			vecArray[2] = positions[2];
 			count = 2;
 
 		}
@@ -197,7 +206,7 @@ public class OldWomanScript : MonoBehaviour
 		{
 
 			//vecArray[3] = new Vector2(0f, 5f);
-			vecArray[3] = position4;
+			vecArray[3] = positions[3];
 			count = 3;
 
 		}
