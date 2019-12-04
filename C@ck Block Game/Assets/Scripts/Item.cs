@@ -7,6 +7,7 @@ public class Item : MonoBehaviour
     public string itemName;
     public bool isInRange = false;
     public bool isPickedUp = false;
+    public bool isDisguise = false;
     
     void Start()
     {

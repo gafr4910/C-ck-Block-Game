@@ -7,6 +7,9 @@ public class JawshMovement : MonoBehaviour
     public float speed = 10;
     public float runSpeed = 15;
     public KeyCode left, right, up, down;
+    public bool hadWaiterDisguise = false;
+    public bool hasWaiterDisguise = false;
+    public bool isDisguisedAsWaiter = false;
 
     private Rigidbody2D     rb;
 	private Animator anim;
@@ -40,20 +43,65 @@ public class JawshMovement : MonoBehaviour
         // pos.x += xAxis * speed * Time.deltaTime;
         // pos.y += yAxis * speed * Time.deltaTime;
         //transform.position = pos;
-        if(xAxis == 0 && yAxis == 0)
+
+        if(!hadWaiterDisguise && hasWaiterDisguise)
         {
-            anim.CrossFade("Jawsh_Idle", 0);
+            isDisguisedAsWaiter = true;
+            hadWaiterDisguise = true;
         }
 
-        else if(Input.GetAxis("Fire3") > 0)
+        bool disguiseKeyPressed = false;
+
+        if((Input.GetKeyDown(KeyCode.E)) && (!isDisguisedAsWaiter) && (hasWaiterDisguise))
         {
-            anim.CrossFade("Jawsh_Run", 0);
-            sr.flipX = xAxis < 0;
+            isDisguisedAsWaiter = true;
+            disguiseKeyPressed = true;
+            //Debug.Log("1");
         }
-        else
+
+        if((Input.GetKeyDown(KeyCode.E)) && (isDisguisedAsWaiter) && !disguiseKeyPressed)
         {
-            anim.CrossFade("Jawsh_Walk", 0);
-            sr.flipX = xAxis < 0;
+            isDisguisedAsWaiter = false;
+            //Debug.Log("2");
+        }
+
+        disguiseKeyPressed = false;
+
+        if(!isDisguisedAsWaiter)
+        {
+            if(xAxis == 0 && yAxis == 0)
+            {
+                anim.CrossFade("Jawsh_Idle", 0);
+            }
+            else if(Input.GetAxis("Fire3") > 0)
+            {
+                anim.CrossFade("Jawsh_Run", 0);
+                sr.flipX = xAxis < 0;
+            }
+            else
+            {
+                anim.CrossFade("Jawsh_Walk", 0);
+                sr.flipX = xAxis < 0;
+            }
+        }
+
+        else if(isDisguisedAsWaiter)
+        {
+            if(xAxis == 0 && yAxis == 0)
+            {
+                anim.CrossFade("Jawsh_Waiter_Idle", 0);
+            }
+            else if(Input.GetAxis("Fire3") > 0)
+            {
+                anim.CrossFade("Jawsh_Waiter_Run", 0);
+                sr.flipX = xAxis < 0;
+            }
+            else
+            {
+
+                anim.CrossFade("Jawsh_Waiter_Walk", 0);
+                sr.flipX = xAxis < 0;
+            }
         }
 
         // float horiz = 0.0f;
