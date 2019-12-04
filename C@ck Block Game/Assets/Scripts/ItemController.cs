@@ -5,7 +5,8 @@ using UnityEngine;
 public class ItemController : MonoBehaviour
 {
     public GameObject[] Items;
-    public GameObject[] FakeProposalScenario;
+    public GameObject[] FakeProposalItems;
+    public GameObject[] FakeProposalNPCs;
     public GameObject Jawsh;
 
     void Update()
@@ -18,6 +19,13 @@ public class ItemController : MonoBehaviour
                 JawshMovement jMove = j.GetComponent<JawshMovement>();
                 jMove.hasWaiterDisguise = true;
             }
+        }
+
+        foreach(GameObject i in FakeProposalItems)
+        {
+            GameObject checkItem = GameObject.Find(i.name);
+            Item itemScript = checkItem.GetComponent<Item>();
+            if
         }
     }
 }
