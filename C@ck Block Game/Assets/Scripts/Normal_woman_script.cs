@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Formal_script : MonoBehaviour
+public class Normal_woman_script : MonoBehaviour
 {
 
     private Animator anim;
@@ -62,7 +62,7 @@ public class Formal_script : MonoBehaviour
 
         if (target != position && !triggered)
         {
-            anim.CrossFade("Formal_walk", 0);
+            anim.CrossFade("Normal_woman_walk", 0);
             position = gameObject.transform.position;
             float step = Time.deltaTime * speed;
             //  Debug.Log(step);
@@ -88,7 +88,7 @@ public class Formal_script : MonoBehaviour
 
         else if (!triggered)
         {
-            anim.CrossFade("Formal_idle", 0);
+            anim.CrossFade("Normal_woman", 0);
             StartCoroutine("MoveManager");
         }
 
@@ -235,7 +235,6 @@ public class Formal_script : MonoBehaviour
             //vecArray[1] = new Vector2(5f, 5f);
             // anim.CrossFade("oldWoman_Walk", 0);
             vecArray[1] = positions[1];
-
             //if (positions[1].x - vecArray[1].x <= 0)
             //{
             //    sr.flipX = false;
