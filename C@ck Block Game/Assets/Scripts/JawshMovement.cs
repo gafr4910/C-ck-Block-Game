@@ -44,6 +44,7 @@ public class JawshMovement : MonoBehaviour
         {
             anim.CrossFade("Jawsh_Idle", 0);
         }
+
         else if(Input.GetAxis("Fire3") > 0)
         {
             anim.CrossFade("Jawsh_Run", 0);
