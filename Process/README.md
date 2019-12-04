@@ -134,3 +134,37 @@ Linda is a nice young woman, and met Todd through Linder (a dating app only for 
 - [ ] Create waiter outfit (new sprite)
 - [ ] Find/make more item art
 - [ ] Develop more map areas
+
+## Game Sound - 12.04.19
+### General
+* **File Size Restrictions:** <10mb
+* **File Format Type:** .mp3
+* **File Quality Type:** 8-bit, chiptune
+
+### Player Sounds
+* Walking and running SFX (inside bar vs. outside in alleyway)
+* Talking (dialogue vs. inner monologue)
+* Picking up or interacting with items SFX (non-diagetic)
+
+### AI/Enemy Sounds
+* Walking SFX
+* Talking (mumbling vs. voiceovers, female vs. male voices)
+
+### Global Elements
+* Club music (diegetic)
+* Muffled club music (diegetic when MC goes outside)
+* Room of people talking (ambient sounds if character is in bar area)
+* Glasses and dishes clinking (ambient sounds if character is in dining area)
+
+### Splash Screens and/or Cinematics
+* Game introduction screen music (main soundtrack, game theme)
+* Character introduction screen music
+* Jawsh introduction: angsty
+* Todd/Lina introduction: peaceful, elegant (opposite of Jawsh’s)
+* Successful checkpoint sound effect (non-diegetic sound to let player know they’re on the right track)
+* Successfully blocking couple (win game sound/music)
+
+### Menus
+* Scrolling through options SFX
+* Select option SFX
+* Reduced in-game, ambient music
