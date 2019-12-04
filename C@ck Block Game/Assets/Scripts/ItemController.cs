@@ -9,6 +9,8 @@ public class ItemController : MonoBehaviour
     public GameObject[] FakeProposalNPCs;
     public GameObject Jawsh;
 
+    private 
+
     void Update()
     {
         foreach(GameObject i in Items)
@@ -25,7 +27,7 @@ public class ItemController : MonoBehaviour
         {
             GameObject checkItem = GameObject.Find(i.name);
             Item itemScript = checkItem.GetComponent<Item>();
-            if
+            //if(){}
         }
     }
 }
