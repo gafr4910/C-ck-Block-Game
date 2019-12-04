@@ -16,6 +16,7 @@ public class OldWomanScript : MonoBehaviour
 	public Vector2 dest2;
     public Vector2[] positions;
     public Vector2[] destinations;
+    public int waitDestTime;
 
  //   public Vector2 position1;
 	//public Vector2 position2;
@@ -30,7 +31,8 @@ public class OldWomanScript : MonoBehaviour
 	private Vector2 target;
 	private Vector2 position;
     private Vector2 position2;
-	public bool triggered = false;
+    private int index = 0;
+    public bool triggered = false;
 
 
 
@@ -50,16 +52,14 @@ public class OldWomanScript : MonoBehaviour
 		position = gameObject.transform.position;
 		target = ChooseDirection();
 
-		//StartCoroutine("Move");
+        index = 0;
+        //StartCoroutine("Move");
 
-	}
+    }
 
 	// Update is called once per frame
 	void Update()
 	{
-
-       
-
         if (target != position && !triggered)
 		{
             anim.CrossFade("Old_woman", 0);
@@ -92,30 +92,66 @@ public class OldWomanScript : MonoBehaviour
             StartCoroutine("MoveManager");
 		}
 
-
-		if (triggered)
+       
+        if (triggered)
 		{
+            //anim.CrossFade("Old_woman", 0);
+            StopCoroutine("MoveManager");
 
-			StopCoroutine("MoveManager");
+            Debug.Log("3: " + index);
 
-     
-            for (int i = 0; i < destinations.Length; i++)
+            if (index<destinations.Length)
             {
+                
 
-                if (destinations[i] != position)
+                position = gameObject.transform.position;
+                if (destinations[index] != position)
                 {
-                    position = gameObject.transform.position;
+                    
+                    // position = gameObject.transform.position;
                     float step = Time.deltaTime * speed;
-                    transform.position = Vector2.MoveTowards(transform.position, destinations[i], step);
-                    Debug.Log(destinations[i]);
+                    transform.position = Vector2.MoveTowards(transform.position, destinations[index], step);
+                    //Debug.Log(destinations[index]);
+
                 }
 
-                if (destinations[i]==position)
+                else
                 {
-                    Debug.Log("here");
+                    index++;
+                    Debug.Log("2: " + index);
+                    Debug.Log(destinations.Length);
+
+                    if (index >= destinations.Length)
+                    {
+
+                        anim.CrossFade("oldWoman_Idle", 0);
+                        StartCoroutine("MoveDestManager");
+                        
+                    }
                 }
+
+                //if (destinations[i] == position)n\
+                //{
+                    
+                //    Debug.Log("here");
+                //}
+
+            
 
             }
+            //else
+            //{
+            //    index = 0;
+            //    triggered = false;
+            //}
+           
+            //for (int i = 0; i < destinations.Length; i++)
+            //{
+
+             
+               
+
+            //}
 
 		}
 
@@ -188,8 +224,20 @@ public class OldWomanScript : MonoBehaviour
 
 	}
 
+    public IEnumerator MoveDestManager()
+    {
+        Debug.Log("1: " + index);
+        yield return new WaitForSeconds(waitDestTime);
+        index = 0;
+        triggered = false;
+        StopCoroutine("MoveDestManager");
+ 
 
-	public Vector2 ChooseDirection()
+    }
+
+
+
+    public Vector2 ChooseDirection()
 	{
 		System.Random ran = new System.Random();
         int r = positions.Length;
