@@ -58560,6 +58560,7 @@ Transform:
   m_GameObject: {fileID: 2107377052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -9.66, y: -2.11, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58570,6 +58571,10 @@ Transform:
 =======
   m_LocalScale: {x: 0.04667867, y: 0.055495758, z: 0.51865184}
 >>>>>>> parent of 49dd841... More Animations
+=======
+  m_LocalPosition: {x: -23.5, y: 6, z: 0}
+  m_LocalScale: {x: 0.05186519, y: 0.05186519, z: 0.51865184}
+>>>>>>> parent of fc94fa3... Map update
 =======
   m_LocalPosition: {x: -23.5, y: 6, z: 0}
   m_LocalScale: {x: 0.05186519, y: 0.05186519, z: 0.51865184}
