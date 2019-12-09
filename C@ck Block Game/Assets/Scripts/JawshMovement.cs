@@ -10,6 +10,7 @@ public class JawshMovement : MonoBehaviour
     public bool hadWaiterDisguise = false;
     public bool hasWaiterDisguise = false;
     public bool isDisguisedAsWaiter = false;
+    public GameObject barLimit;
 
     private Rigidbody2D     rb;
 	private Animator anim;
@@ -83,6 +84,8 @@ public class JawshMovement : MonoBehaviour
                 anim.CrossFade("Jawsh_Walk", 0);
                 sr.flipX = xAxis < 0;
             }
+
+            barLimit.SetActive(true);
         }
 
         else if(isDisguisedAsWaiter)
@@ -102,6 +105,8 @@ public class JawshMovement : MonoBehaviour
                 anim.CrossFade("Jawsh_Waiter_Walk", 0);
                 sr.flipX = xAxis < 0;
             }
+
+            barLimit.SetActive(false);
         }
 
         // float horiz = 0.0f;
