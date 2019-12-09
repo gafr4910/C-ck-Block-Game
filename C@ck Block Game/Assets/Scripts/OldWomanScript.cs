@@ -46,8 +46,9 @@ public class OldWomanScript: MonoBehaviour
 		anim = GetComponent<Animator>();
 		sr = GetComponent<SpriteRenderer>();
 
-		//ExitPosition = new Vector2(2, 2);
-		vecArray[0] = new Vector2(0f, 0f);
+        //ExitPosition = new Vector2(2, 2);
+
+        vecArray[0] = new Vector2(0f, 0f);
 
 		position = gameObject.transform.position;
 		target = ChooseDirection();
@@ -62,7 +63,7 @@ public class OldWomanScript: MonoBehaviour
 	{
         if (target != position && !triggered)
 		{
-            anim.CrossFade("Old_woman", 0);
+            anim.CrossFade("OldWoman_Walk", 0);
             position = gameObject.transform.position;
 			float step = Time.deltaTime * speed;
             //  Debug.Log(step);
@@ -126,7 +127,7 @@ public class OldWomanScript: MonoBehaviour
                     {
 
                         //anim.CrossFade("oldWoman_Idle", 0);
-                        anim.CrossFade("Old_Woman", 0);
+                        anim.CrossFade("OldWoman_Walk", 0);
                         StartCoroutine("MoveDestManager");
                         
                     }
@@ -242,7 +243,7 @@ public class OldWomanScript: MonoBehaviour
 		System.Random ran = new System.Random();
         int r = positions.Length;
 
-        int i = ran.Next(0, 3);
+        int i = ran.Next(0, 4);
 
 		//Vector2 temp = new Vector2();
 
