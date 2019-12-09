@@ -16,8 +16,9 @@ public class Normal_woman_script : MonoBehaviour
     public Vector2 dest2;
     public Vector2[] positions;
     public Vector2[] destinations;
+    public int waitDestTime;
 
-    //   public Vector2 position1;
+    //public Vector2 position1;
     //public Vector2 position2;
     //public Vector2 position3;
     //public Vector2 position4;
@@ -30,6 +31,7 @@ public class Normal_woman_script : MonoBehaviour
     private Vector2 target;
     private Vector2 position;
     private Vector2 position2;
+    private int index = 0;
     public bool triggered = false;
 
 
@@ -57,8 +59,6 @@ public class Normal_woman_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
 
         if (target != position && !triggered)
         {
@@ -98,80 +98,49 @@ public class Normal_woman_script : MonoBehaviour
 
             StopCoroutine("MoveManager");
 
+            Debug.Log("3: " + index);
 
-            for (int i = 0; i < destinations.Length; i++)
+            if (index < destinations.Length)
             {
 
-                if (destinations[i] != position)
+
+                position = gameObject.transform.position;
+                if (destinations[index] != position)
                 {
-                    position = gameObject.transform.position;
+
+                    // position = gameObject.transform.position;
                     float step = Time.deltaTime * speed;
-                    transform.position = Vector2.MoveTowards(transform.position, destinations[i], step);
-                    Debug.Log(destinations[i]);
+                    transform.position = Vector2.MoveTowards(transform.position, destinations[index], step);
+                    //Debug.Log(destinations[index]);
+
                 }
 
-                if (destinations[i] == position)
+                else
                 {
-                    Debug.Log("here");
+                    index++;
+                    Debug.Log("2: " + index);
+                    Debug.Log(destinations.Length);
+
+                    if (index >= destinations.Length)
+                    {
+
+                        anim.CrossFade("Normal_woman", 0);
+                        StartCoroutine("MoveDestManager");
+                    }
                 }
+
+                //if (destinations[i] == position)n\
+                //{
+
+                //    Debug.Log("here");
+                //}
+
+
 
             }
 
         }
-
-
-        //else if(triggered && position == dest && dest2!=null)
-        // {
-        //     Debug.Log("nice");
-        //     position = gameObject.transform.position;
-        //     float step = Time.deltaTime * speed;
-        //     transform.position = Vector2.MoveTowards(transform.position, dest2, step);
-
-        // }
-
-
-
-        //else if(triggered)
-        //{
-        //    StartCoroutine("MoveSomewhere");
-        //}
-
-        // if (transform.position==target)
-        //{
-
-
-        //}
-
-
-        //ExitPosition = Vector2(xPos, yPos);
-
-        //transform.position = new Vector3(xPos, yPos, 0);
-
-        //if (transform.position.x < 3.0f)
-        //{
-        //transform.position.x += moveForce * Time.deltaTime;
-
-        //transform.position = Vector2.Lerp(transform.position , ExitPosition, speed * Time.deltaTime);
-
-        //transform.position = new Vector2(xPos, yPos);
-
-        //}
     }
-
-    //public IEnumerator MoveSomewhere()
-    //{
-    //    float f = (int)Random.Range(waitMin, waitMax);
-
-    //    //Debug.Log(f);
-    //     yield return new WaitForSeconds(f);
-
-    //    Vector2 dest = new Vector2(12f, 12f);
-
-    //    StopCoroutine("MoveSomewhere");
-
-    //    //yield return null;
-
-    //}
 
     public IEnumerator MoveManager()
     {
@@ -185,6 +154,17 @@ public class Normal_woman_script : MonoBehaviour
         StopCoroutine("MoveManager");
 
         //yield return null;
+
+    }
+
+    public IEnumerator MoveDestManager()
+    {
+        Debug.Log("1: " + index);
+        yield return new WaitForSeconds(waitDestTime);
+        index = 0;
+        triggered = false;
+        StopCoroutine("MoveDestManager");
+
 
     }
 

@@ -16,8 +16,9 @@ public class BarScript : MonoBehaviour
     public Vector2 dest2;
     public Vector2[] positions;
     public Vector2[] destinations;
+    public int waitDestTime;
 
-    //   public Vector2 position1;
+    //public Vector2 position1;
     //public Vector2 position2;
     //public Vector2 position3;
     //public Vector2 position4;
@@ -27,11 +28,12 @@ public class BarScript : MonoBehaviour
     Vector2 ExitPosition;
     //public float xPos = 0;
     //public float yPos = 0;
-    private float wait;
     private Vector2 target;
     private Vector2 position;
     private Vector2 position2;
+    private int index = 0;
     public bool triggered = false;
+    public bool FakeProposal = false;
 
 
 
@@ -105,22 +107,45 @@ public class BarScript : MonoBehaviour
 
             StopCoroutine("MoveManager");
 
+            Debug.Log("3: " + index);
 
-            for (int i = 0; i < destinations.Length; i++)
+            if (index < destinations.Length)
             {
 
-                if (destinations[i] != position)
+
+                position = gameObject.transform.position;
+                if (destinations[index] != position)
                 {
-                    position = gameObject.transform.position;
+
+                    // position = gameObject.transform.position;
                     float step = Time.deltaTime * speed;
-                    transform.position = Vector2.MoveTowards(transform.position, destinations[i], step);
-                    Debug.Log(destinations[i]);
+                    transform.position = Vector2.MoveTowards(transform.position, destinations[index], step);
+                    //Debug.Log(destinations[index]);
+
                 }
 
-                if (destinations[i] == position)
+                else
                 {
-                    Debug.Log("here");
+                    index++;
+                    Debug.Log("2: " + index);
+                    Debug.Log(destinations.Length);
+
+                    if (index >= destinations.Length)
+                    {
+
+                        anim.CrossFade("Old_idle", 0);
+                        StartCoroutine("MoveDestManager");
+
+                    }
                 }
+
+                //if (destinations[i] == position)n\
+                //{
+
+                //    Debug.Log("here");
+                //}
+
+
 
             }
 
@@ -183,7 +208,8 @@ public class BarScript : MonoBehaviour
     public IEnumerator MoveManager()
     {
         float f = (int)Random.Range(waitMin, waitMax);
-        wait = f;
+
+        //float wait = f;
         //Debug.Log(f);
         //if (f>=3)
         //{
@@ -199,13 +225,25 @@ public class BarScript : MonoBehaviour
 
     }
 
+    public IEnumerator MoveDestManager()
+    {
+        Debug.Log("1: " + index);
+        yield return new WaitForSeconds(waitDestTime);
+        index = 0;
+        triggered = false;
+        StopCoroutine("MoveDestManager");
+
+
+    }
+
 
     public Vector2 ChooseDirection()
     {
         System.Random ran = new System.Random();
         int r = positions.Length;
 
-        int i = ran.Next(0, 3);
+        int i = ran.Next(0, 4);
+        Debug.Log(i);
 
         //Vector2 temp = new Vector2();
 

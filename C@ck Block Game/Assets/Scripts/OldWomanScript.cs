@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OldWomanScript : MonoBehaviour
+public class OldWomanScript: MonoBehaviour
 {
 
 	private Animator anim;
@@ -18,7 +18,7 @@ public class OldWomanScript : MonoBehaviour
     public Vector2[] destinations;
     public int waitDestTime;
 
- //   public Vector2 position1;
+    //public Vector2 position1;
 	//public Vector2 position2;
 	//public Vector2 position3;
 	//public Vector2 position4;
@@ -57,8 +57,8 @@ public class OldWomanScript : MonoBehaviour
 
     }
 
-	// Update is called once per frame
-	void Update()
+    // Update is called once per frame
+    void Update()
 	{
         if (target != position && !triggered)
 		{
@@ -98,7 +98,7 @@ public class OldWomanScript : MonoBehaviour
             //anim.CrossFade("Old_woman", 0);
             StopCoroutine("MoveManager");
 
-            Debug.Log("3: " + index);
+            //Debug.Log("3: " + index);
 
             if (index<destinations.Length)
             {
@@ -118,13 +118,15 @@ public class OldWomanScript : MonoBehaviour
                 else
                 {
                     index++;
-                    Debug.Log("2: " + index);
-                    Debug.Log(destinations.Length);
+
+                    //Debug.Log("2: " + index);
+                  //  Debug.Log(destinations.Length);
 
                     if (index >= destinations.Length)
                     {
 
-                        anim.CrossFade("oldWoman_Idle", 0);
+                        //anim.CrossFade("oldWoman_Idle", 0);
+                        anim.CrossFade("Old_Woman", 0);
                         StartCoroutine("MoveDestManager");
                         
                     }
@@ -226,13 +228,11 @@ public class OldWomanScript : MonoBehaviour
 
     public IEnumerator MoveDestManager()
     {
-        Debug.Log("1: " + index);
+      //  Debug.Log("1: " + index);
         yield return new WaitForSeconds(waitDestTime);
         index = 0;
         triggered = false;
         StopCoroutine("MoveDestManager");
- 
-
     }
 
 
@@ -274,7 +274,6 @@ public class OldWomanScript : MonoBehaviour
             //}
            // Debug.Log(positions[0].x - vecArray[0].x);
             count = 0;
-
 
         }
 
