@@ -100,7 +100,7 @@ public class Formal_script : MonoBehaviour
 
             StopCoroutine("MoveManager");
 
-            Debug.Log("3: " + index);
+            //Debug.Log("3: " + index);
 
             if (index < destinations.Length)
             {

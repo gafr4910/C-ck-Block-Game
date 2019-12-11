@@ -8,8 +8,10 @@ public class ItemController : MonoBehaviour
     public GameObject[] FakeProposalItems;
     public GameObject[] FakeProposalNPCs;
     public GameObject Jawsh;
+    public GameObject Todd;
+    public GameObject Linda;
 
-    private 
+    private bool allPickedUp = true;
 
     void Update()
     {
@@ -27,7 +29,26 @@ public class ItemController : MonoBehaviour
         {
             GameObject checkItem = GameObject.Find(i.name);
             Item itemScript = checkItem.GetComponent<Item>();
-            //if(){}
+            //Debug.Log(itemScript.isPickedUp);
+            if(!itemScript.isPickedUp)
+            {
+                allPickedUp = false;
+                //Debug.Log("Nay!");
+            }
+        }
+        if(allPickedUp)
+        {
+            GameObject t = GameObject.Find("Todd");
+            Formal_script tAct= t.GetComponent<Formal_script>();
+            tAct.triggered = true;
+            GameObject l = GameObject.Find("Linda");
+            Linda_script lAct = l.GetComponent<Linda_script>();
+            lAct.triggered = true;
+            //Debug.Log("yay!");
+        }
+        else if(!allPickedUp)
+        {
+            allPickedUp = true;
         }
     }
 }
