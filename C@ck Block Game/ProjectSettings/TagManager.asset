@@ -11,6 +11,8 @@ TagManager:
   - marriedLady
   - Todd
   - Linda
+  - youngGirl
+  - youngBoy
   layers:
   - Default
   - TransparentFX
