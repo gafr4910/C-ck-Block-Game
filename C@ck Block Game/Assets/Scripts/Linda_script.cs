@@ -33,7 +33,7 @@ public class Linda_script : MonoBehaviour
     private Vector2 position2;
     private int index = 0;
     public bool triggered = false;
-
+   // public bool FakeProposal
 
 
     //public LayerMask blockingLayer=wallTest;
@@ -51,7 +51,7 @@ public class Linda_script : MonoBehaviour
 
         position = gameObject.transform.position;
         target = ChooseDirection();
-
+        sr.flipX = true;
         //StartCoroutine("Move");
 
     }
@@ -62,37 +62,37 @@ public class Linda_script : MonoBehaviour
 
 
 
-        if (target != position && !triggered)
-        {
-            anim.CrossFade("Linda_walk", 0);
-            position = gameObject.transform.position;
-            float step = Time.deltaTime * speed;
-            //  Debug.Log(step);
-            // anim.CrossFade("Old_Man_Walk", 0);
+        //if (target != position && !triggered)
+        //{
+        //    anim.CrossFade("Linda_walk", 0);
+        //    position = gameObject.transform.position;
+        //    float step = Time.deltaTime * speed;
+        //    //  Debug.Log(step);
+        //    // anim.CrossFade("Old_Man_Walk", 0);
 
-           // Debug.Log(position2.x - gameObject.transform.position.x);
+        //   // Debug.Log(position2.x - gameObject.transform.position.x);
 
-            if (position2.x - gameObject.transform.position.x > 0)
-            {
-                sr.flipX = true;
+        //    if (position2.x - gameObject.transform.position.x > 0)
+        //    {
+        //        sr.flipX = true;
 
-            }
-            else
-            {
-                sr.flipX = false;
-            }
+        //    }
+        //    else
+        //    {
+        //        sr.flipX = false;
+        //    }
 
-            transform.position = Vector2.MoveTowards(transform.position, target, step);
+        //    transform.position = Vector2.MoveTowards(transform.position, target, step);
 
-            //For loop for all of the destination points and create a vector of destinations 
-            //Debug.Log("shit");
-        }
+        //    //For loop for all of the destination points and create a vector of destinations 
+        //    //Debug.Log("shit");
+        //}
 
-        else if (!triggered)
-        {
-            anim.CrossFade("Linda_idle", 0);
-          //  StartCoroutine("MoveManager");
-        }
+        //else if (!triggered)
+        //{
+        //    anim.CrossFade("Linda_idle", 0);
+        //  //  StartCoroutine("MoveManager");
+        //}
 
 
         if (triggered)

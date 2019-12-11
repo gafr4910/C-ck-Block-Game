@@ -169,6 +169,7 @@ MonoBehaviour:
   destinations: []
   waitDestTime: 0
   triggered: 0
+  FakeProposal: 0
 --- !u!95 &32994980
 Animator:
   serializedVersion: 3
@@ -269,7 +270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &186927075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1234,6 +1235,7 @@ MonoBehaviour:
   hadWaiterDisguise: 0
   hasWaiterDisguise: 0
   isDisguisedAsWaiter: 0
+  barLimit: {fileID: 0}
 --- !u!212 &1771129020
 SpriteRenderer:
   m_ObjectHideFlags: 0

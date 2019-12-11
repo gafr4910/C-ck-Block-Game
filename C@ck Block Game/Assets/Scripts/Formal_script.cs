@@ -62,37 +62,37 @@ public class Formal_script : MonoBehaviour
 
 
 
-        if (target != position && !triggered)
-        {
-            anim.CrossFade("Formal_walk", 0);
-            position = gameObject.transform.position;
-            float step = Time.deltaTime * speed;
-            //  Debug.Log(step);
-            // anim.CrossFade("Old_Man_Walk", 0);
+        //if (target != position && !triggered)
+        //{
+        //    anim.CrossFade("Formal_walk", 0);
+        //    position = gameObject.transform.position;
+        //    float step = Time.deltaTime * speed;
+        //    //  Debug.Log(step);
+        //    // anim.CrossFade("Old_Man_Walk", 0);
 
-            // Debug.Log(position2.x - gameObject.transform.position.x);
+        //    // Debug.Log(position2.x - gameObject.transform.position.x);
 
-            if (position2.x - gameObject.transform.position.x > 0)
-            {
-                sr.flipX = true;
+        //    if (position2.x - gameObject.transform.position.x > 0)
+        //    {
+        //        sr.flipX = true;
 
-            }
-            else
-            {
-                sr.flipX = false;
-            }
+        //    }
+        //    else
+        //    {
+        //        sr.flipX = false;
+        //    }
 
-            transform.position = Vector2.MoveTowards(transform.position, target, step);
+        //    transform.position = Vector2.MoveTowards(transform.position, target, step);
 
-            //For loop for all of the destination points and create a vector of destinations 
-            //Debug.Log("shit");
-        }
+        //    //For loop for all of the destination points and create a vector of destinations 
+        //    //Debug.Log("shit");
+        //}
 
-        else if (!triggered)
-        {
-            anim.CrossFade("Formal_idle", 0);
-            //StartCoroutine("MoveManager");
-        }
+        //else if (!triggered)
+        //{
+        //    anim.CrossFade("Formal_idle", 0);
+        //    //StartCoroutine("MoveManager");
+        //}
 
 
         if (triggered)
@@ -230,7 +230,7 @@ public class Formal_script : MonoBehaviour
         System.Random ran = new System.Random();
         int r = positions.Length;
 
-        int i = ran.Next(0, 3);
+        int i = ran.Next(0, 4);
 
         //Vector2 temp = new Vector2();
 
