@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Jawsh
   - Interactable Object
+  - oldWoman
+  - Bartender
+  - marriedLady
+  - Todd
+  - Linda
   layers:
   - Default
   - TransparentFX
