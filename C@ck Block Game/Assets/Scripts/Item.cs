@@ -20,7 +20,9 @@ public class Item : MonoBehaviour
         {
             //Debug.Log("yep");
             isPickedUp = true;
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
+            SpriteRenderer sprite = this.gameObject.GetComponent<SpriteRenderer>();
+            sprite.enabled = false;
         }
         //Debug.Log(isPickedUp);
     }
