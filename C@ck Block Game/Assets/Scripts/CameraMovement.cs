@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform PlayerTransform;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Vector3 pos = transform.position;
+        pos.x = PlayerTransform.position.x;
+        pos.y = PlayerTransform.position.y;
+        transform.position = pos;
     }
 }
