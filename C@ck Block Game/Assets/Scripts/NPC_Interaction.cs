@@ -21,6 +21,7 @@ public class NPC_Interaction : MonoBehaviour
 
     void Update()
     {
+        //Debug.Log(isInRange);
         if(isInRange && Input.GetKeyDown(KeyCode.Space))
         {
             //Debug.Log("yep");
@@ -29,6 +30,7 @@ public class NPC_Interaction : MonoBehaviour
             textbox.enabled = true;
             text.enabled = true;
             Invoke("ClearText", 2);
+            Debug.Log("1?");
         }
         //Debug.Log(isPickedUp);
     }

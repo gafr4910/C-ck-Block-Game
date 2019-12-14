@@ -223,9 +223,10 @@ public class youngGirl : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         GameObject otherGO = other.gameObject;
-        Debug.Log(other);
+        //Debug.Log(other);
         co.enabled = true;
         instruction.text = "God help me";
+        Debug.Log("1");
         if (otherGO.name == "Jawsh")
         {
             isInRange = true;
@@ -246,7 +247,8 @@ public class youngGirl : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         GameObject otherGO = other.gameObject;
-        Debug.Log(other);
+        //Debug.Log(other);
+        Debug.Log("1");
         if (otherGO.name == "Jawsh")
         {
             isInRange = true;

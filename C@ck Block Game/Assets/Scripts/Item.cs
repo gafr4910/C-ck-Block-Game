@@ -16,6 +16,7 @@ public class Item : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(isInRange);
         if(isInRange && Input.GetKeyDown(KeyCode.Space))
         {
             //Debug.Log("yep");
@@ -23,6 +24,21 @@ public class Item : MonoBehaviour
             //this.gameObject.SetActive(false);
             SpriteRenderer sprite = this.gameObject.GetComponent<SpriteRenderer>();
             sprite.enabled = false;
+            BoxCollider2D bCol = this.gameObject.GetComponent<BoxCollider2D>();
+            if(bCol)
+            {
+                bCol.isTrigger = true;
+            }
+            CapsuleCollider2D cCol = this.gameObject.GetComponent<CapsuleCollider2D>();
+            if(cCol)
+            {
+                cCol.isTrigger = true;
+            }
+            CircleCollider2D cirCol = this.gameObject.GetComponent<CircleCollider2D>();
+            if(cirCol)
+            {
+                cirCol.isTrigger = true;
+            }
         }
         //Debug.Log(isPickedUp);
     }
@@ -30,7 +46,7 @@ public class Item : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         GameObject otherGO = other.gameObject;
-        //Debug.Log(other);
+        Debug.Log(other);
         if(otherGO.name == "Jawsh")
         {
             isInRange = true;
@@ -50,7 +66,7 @@ public class Item : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         GameObject otherGO = other.gameObject;
-        //Debug.Log(other);
+        Debug.Log(other);
         if(otherGO.name == "Jawsh")
         {
             isInRange = true;

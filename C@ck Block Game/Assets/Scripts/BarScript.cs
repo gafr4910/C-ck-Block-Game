@@ -114,7 +114,7 @@ public class BarScript : MonoBehaviour
 
             StopCoroutine("MoveManager");
 
-            Debug.Log("3: " + index);
+            //Debug.Log("3: " + index);
 
             if (index < destinations.Length)
             {
@@ -134,8 +134,8 @@ public class BarScript : MonoBehaviour
                 else
                 {
                     index++;
-                    Debug.Log("2: " + index);
-                    Debug.Log(destinations.Length);
+                    //Debug.Log("2: " + index);
+                    //Debug.Log(destinations.Length);
 
                     if (index >= destinations.Length)
                     {
@@ -222,7 +222,7 @@ public class BarScript : MonoBehaviour
         if (otherGO.name == "Jawsh")
         {
             isInRange = true;
-            Debug.Log("Jawsh");
+            //Debug.Log("Jawsh");
         }
     }
 
@@ -239,7 +239,7 @@ public class BarScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         GameObject otherGO = other.gameObject;
-        Debug.Log(other);
+        //Debug.Log(other);
         if (otherGO.name == "Jawsh")
         {
             isInRange = true;
@@ -277,7 +277,7 @@ public class BarScript : MonoBehaviour
 
     public IEnumerator MoveDestManager()
     {
-        Debug.Log("1: " + index);
+        //Debug.Log("1: " + index);
         yield return new WaitForSeconds(waitDestTime);
         index = 0;
         triggered = false;
@@ -293,7 +293,7 @@ public class BarScript : MonoBehaviour
         int r = positions.Length;
 
         int i = ran.Next(0, 4);
-        Debug.Log(i);
+        //Debug.Log(i);
 
         //Vector2 temp = new Vector2();
 
