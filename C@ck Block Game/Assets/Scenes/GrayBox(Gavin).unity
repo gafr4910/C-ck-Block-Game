@@ -1222,7 +1222,7 @@ MonoBehaviour:
   itemName: 
   isInRange: 0
   isPickedUp: 0
-  isDisguise: 0
+  isDisguise: 1
 --- !u!61 &1908466675
 BoxCollider2D:
   m_ObjectHideFlags: 0
