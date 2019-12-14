@@ -49,8 +49,8 @@ public class OldWomanScript: MonoBehaviour
 		// capsuleCollider = GetComponent<CapsuleCollider2D>();
 		anim = GetComponent<Animator>();
 		sr = GetComponent<SpriteRenderer>();
-        co = GetComponent<Canvas>();
-        instruction = GetComponent<Text>();
+        co = GameObject.Find("DialogCanvas").GetComponent<Canvas>();
+        instruction = GameObject.Find("/DialogCanvas/Image/Text").GetComponent<Text>();
 
         //ExitPosition = new Vector2(2, 2);
 
@@ -102,6 +102,7 @@ public class OldWomanScript: MonoBehaviour
        
         if (triggered)
 		{
+            
             //anim.CrossFade("Old_woman", 0);
             StopCoroutine("MoveManager");
 
@@ -222,8 +223,8 @@ public class OldWomanScript: MonoBehaviour
     {
         GameObject otherGO = other.gameObject;
         co.enabled = true;
-        instruction.text = "God help me";
-        //Debug.Log(other);
+        instruction.text = "Gawd help me";
+        Debug.Log(otherGO.name);
         if (otherGO.name == "Jawsh")
         {
             isInRange = true;

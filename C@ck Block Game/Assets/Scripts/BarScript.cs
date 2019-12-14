@@ -50,8 +50,8 @@ public class BarScript : MonoBehaviour
         // capsuleCollider = GetComponent<CapsuleCollider2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        co = GetComponent<Canvas>();
-        instruction = GetComponent<Text>();
+        co = GameObject.Find("DialogCanvas").GetComponent<Canvas>();
+        instruction = GameObject.Find("/DialogCanvas/Image/Text").GetComponent<Text>();
 
         //ExitPosition = new Vector2(2, 2);
         vecArray[0] = new Vector2(0f, 0f);

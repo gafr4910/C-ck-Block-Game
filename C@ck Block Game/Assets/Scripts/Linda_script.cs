@@ -49,8 +49,8 @@ public class Linda_script : MonoBehaviour
         // capsuleCollider = GetComponent<CapsuleCollider2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        instruction = GetComponent<Text>();
-        co = GetComponent<Canvas>();
+        co = GameObject.Find("DialogCanvas").GetComponent<Canvas>();
+        instruction = GameObject.Find("/DialogCanvas/Image/Text").GetComponent<Text>();
 
         //ExitPosition = new Vector2(2, 2);
         vecArray[0] = new Vector2(0f, 0f);
