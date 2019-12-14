@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Linda_script : MonoBehaviour
 {
@@ -17,15 +18,18 @@ public class Linda_script : MonoBehaviour
     public Vector2[] positions;
     public Vector2[] destinations;
     public int waitDestTime;
+    public bool isInRange;
+    Text instruction;
+    private Canvas co;
 
     //public Vector2 position1;
-	//public Vector2 position2;
-	//public Vector2 position3;
-	//public Vector2 position4;
+    //public Vector2 position2;
+    //public Vector2 position3;
+    //public Vector2 position4;
 
-	//public float maxDistanceFromWall = .1f;
-	//public float moveForce = 40f;
-	Vector2 ExitPosition;
+    //public float maxDistanceFromWall = .1f;
+    //public float moveForce = 40f;
+    Vector2 ExitPosition;
 	//public float xPos = 0;
 	//public float yPos = 0;
 	private Vector2 target;
@@ -45,6 +49,8 @@ public class Linda_script : MonoBehaviour
         // capsuleCollider = GetComponent<CapsuleCollider2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        instruction = GetComponent<Text>();
+        co = GetComponent<Canvas>();
 
         //ExitPosition = new Vector2(2, 2);
         vecArray[0] = new Vector2(0f, 0f);
@@ -197,6 +203,47 @@ public class Linda_script : MonoBehaviour
     //    //yield return null;
 
     //}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        //Debug.Log(other);
+        co.enabled = true;
+        instruction.text = "God help me";
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = true;
+            Debug.Log("Jawsh");
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        //Debug.Log(other);
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        Debug.Log(other);
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = false;
+        }
+    }
 
     public IEnumerator MoveManager()
     {

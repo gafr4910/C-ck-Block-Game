@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class youngGirl : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class youngGirl : MonoBehaviour
     public Vector2[] positions;
     public Vector2[] destinations;
     public int waitDestTime;
+    public bool isInRange;
+    Text instruction;
+    private Canvas co;
 
     //public Vector2 position1;
     //public Vector2 position2;
@@ -45,6 +49,8 @@ public class youngGirl : MonoBehaviour
         // capsuleCollider = GetComponent<CapsuleCollider2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        co = GetComponent<Canvas>();
+        instruction = GetComponent<Text>();
 
         //ExitPosition = new Vector2(2, 2);
 
@@ -98,6 +104,8 @@ public class youngGirl : MonoBehaviour
         {
             //anim.CrossFade("Old_woman", 0);
             StopCoroutine("MoveManager");
+            co.enabled = true;
+            instruction.text = "God help me";
 
             //Debug.Log("3: " + index);
 
@@ -211,6 +219,48 @@ public class youngGirl : MonoBehaviour
     //    //yield return null;
 
     //}
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        Debug.Log(other);
+        co.enabled = true;
+        instruction.text = "God help me";
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = true;
+            Debug.Log("Jawsh");
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        //Debug.Log(other);
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        Debug.Log(other);
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = false;
+        }
+    }
 
     public IEnumerator MoveManager()
     {

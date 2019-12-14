@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Normal_woman_script : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class Normal_woman_script : MonoBehaviour
     public Vector2[] positions;
     public Vector2[] destinations;
     public int waitDestTime;
+    public bool isInRange;
+    Text instruction;
+    private Canvas co;
 
     //public Vector2 position1;
     //public Vector2 position2;
@@ -45,6 +49,8 @@ public class Normal_woman_script : MonoBehaviour
         // capsuleCollider = GetComponent<CapsuleCollider2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        co = GetComponent<Canvas>();
+        instruction = GetComponent<Text>();
 
         //ExitPosition = new Vector2(2, 2);
         vecArray[0] = new Vector2(0f, 0f);
@@ -139,6 +145,48 @@ public class Normal_woman_script : MonoBehaviour
 
             }
 
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        //Debug.Log(other);
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = true;
+            Debug.Log("Jawsh");
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        //Debug.Log(other);
+        co.enabled = true;
+        instruction.text = "God help me";
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        Debug.Log(other);
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = false;
         }
     }
 

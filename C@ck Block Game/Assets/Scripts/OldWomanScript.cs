@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OldWomanScript: MonoBehaviour
 {
 
 	private Animator anim;
 	private SpriteRenderer sr;
+    private Canvas co;
+    Text instruction;
 
-	public float speed = 10;
+    public float speed = 10;
 	public Vector2[] vecArray = new Vector2[4];
 	public int waitMin = 2;
 	public int waitMax = 4;
@@ -17,15 +20,16 @@ public class OldWomanScript: MonoBehaviour
     public Vector2[] positions;
     public Vector2[] destinations;
     public int waitDestTime;
+    public bool isInRange;
 
     //public Vector2 position1;
-	//public Vector2 position2;
-	//public Vector2 position3;
-	//public Vector2 position4;
+    //public Vector2 position2;
+    //public Vector2 position3;
+    //public Vector2 position4;
 
-	//public float maxDistanceFromWall = .1f;
-	//public float moveForce = 40f;
-	Vector2 ExitPosition;
+    //public float maxDistanceFromWall = .1f;
+    //public float moveForce = 40f;
+    Vector2 ExitPosition;
 	//public float xPos = 0;
 	//public float yPos = 0;
 	private Vector2 target;
@@ -45,6 +49,8 @@ public class OldWomanScript: MonoBehaviour
 		// capsuleCollider = GetComponent<CapsuleCollider2D>();
 		anim = GetComponent<Animator>();
 		sr = GetComponent<SpriteRenderer>();
+        co = GetComponent<Canvas>();
+        instruction = GetComponent<Text>();
 
         //ExitPosition = new Vector2(2, 2);
 
@@ -197,22 +203,65 @@ public class OldWomanScript: MonoBehaviour
 		//}
 	}
 
-	//public IEnumerator MoveSomewhere()
-	//{
-	//    float f = (int)Random.Range(waitMin, waitMax);
+    //public IEnumerator MoveSomewhere()
+    //{
+    //    float f = (int)Random.Range(waitMin, waitMax);
 
-	//    //Debug.Log(f);
-	//     yield return new WaitForSeconds(f);
+    //    //Debug.Log(f);
+    //     yield return new WaitForSeconds(f);
 
-	//    Vector2 dest = new Vector2(12f, 12f);
+    //    Vector2 dest = new Vector2(12f, 12f);
 
-	//    StopCoroutine("MoveSomewhere");
+    //    StopCoroutine("MoveSomewhere");
 
-	//    //yield return null;
+    //    //yield return null;
 
-	//}
+    //}
 
-	public IEnumerator MoveManager()
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        co.enabled = true;
+        instruction.text = "God help me";
+        //Debug.Log(other);
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = true;
+            Debug.Log("Jawsh");
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        //Debug.Log(other);
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        Debug.Log(other);
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        GameObject otherGO = other.gameObject;
+        if (otherGO.name == "Jawsh")
+        {
+            isInRange = false;
+        }
+    }
+
+
+    public IEnumerator MoveManager()
 	{
 		float f = (int)Random.Range(waitMin, waitMax);
 
