@@ -24,12 +24,14 @@ public class NPC_Interaction : MonoBehaviour
         //Debug.Log(isInRange);
         if(isInRange && Input.GetKeyDown(KeyCode.Space))
         {
-            //Debug.Log("yep");
+            Debug.Log("yep");
             //isPickedUp = true;
             //this.gameObject.SetActive(false);
             textbox.enabled = true;
             text.enabled = true;
-            Invoke("ClearText", 2);
+            int rand = Random.Range(0, barks.Length);
+            text.text = barks[rand];
+            Invoke("ClearText", 5);
             Debug.Log("1?");
         }
         //Debug.Log(isPickedUp);

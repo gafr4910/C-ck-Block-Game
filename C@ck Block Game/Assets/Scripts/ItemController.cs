@@ -17,7 +17,8 @@ public class ItemController : MonoBehaviour
     {
         foreach(GameObject i in Items)
         {
-            if(i.name == "Waiter Bundle" && !i.activeSelf)
+            SpriteRenderer sRend = i.GetComponent<SpriteRenderer>();
+            if(i.name == "Waiter Bundle" && !sRend.enabled)
             {
                 GameObject j = GameObject.Find("Jawsh");
                 JawshMovement jMove = j.GetComponent<JawshMovement>();

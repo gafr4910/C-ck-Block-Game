@@ -16,7 +16,7 @@ public class Item : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(isInRange);
+        //Debug.Log(isInRange);
         if(isInRange && Input.GetKeyDown(KeyCode.Space))
         {
             //Debug.Log("yep");
