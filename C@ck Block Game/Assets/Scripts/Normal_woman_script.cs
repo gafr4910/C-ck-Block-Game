@@ -20,7 +20,7 @@ public class Normal_woman_script : MonoBehaviour
     public int waitDestTime;
     public bool isInRange;
     Text instruction;
-    private Canvas co;
+    public Canvas co;
 
     //public Vector2 position1;
     //public Vector2 position2;
@@ -49,7 +49,7 @@ public class Normal_woman_script : MonoBehaviour
         // capsuleCollider = GetComponent<CapsuleCollider2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        co = GameObject.Find("DialogCanvas").GetComponent<Canvas>();
+        //co = GameObject.Find("DialogCanvas").GetComponent<Canvas>();
         instruction = GameObject.Find("/DialogCanvas/Image/Text").GetComponent<Text>();
 
         //ExitPosition = new Vector2(2, 2);
@@ -159,36 +159,36 @@ public class Normal_woman_script : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        GameObject otherGO = other.gameObject;
-        //Debug.Log(other);
-        co.enabled = true;
-        instruction.text = "God help me";
-        if (otherGO.name == "Jawsh")
-        {
-            isInRange = false;
-        }
-    }
+    //void OnTriggerExit2D(Collider2D other)
+    //{
+    //    GameObject otherGO = other.gameObject;
+    //    //Debug.Log(other);
+    //    co.enabled = true;
+    //    instruction.text = "God help me";
+    //    if (otherGO.name == "Jawsh")
+    //    {
+    //        isInRange = false;
+    //    }
+    //}
 
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        GameObject otherGO = other.gameObject;
-        Debug.Log(other);
-        if (otherGO.name == "Jawsh")
-        {
-            isInRange = true;
-        }
-    }
+    //void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    GameObject otherGO = other.gameObject;
+    //    Debug.Log(other);
+    //    if (otherGO.name == "Jawsh")
+    //    {
+    //        isInRange = true;
+    //    }
+    //}
 
-    void OnCollisionExit2D(Collision2D other)
-    {
-        GameObject otherGO = other.gameObject;
-        if (otherGO.name == "Jawsh")
-        {
-            isInRange = false;
-        }
-    }
+    //void OnCollisionExit2D(Collision2D other)
+    //{
+    //    GameObject otherGO = other.gameObject;
+    //    if (otherGO.name == "Jawsh")
+    //    {
+    //        isInRange = false;
+    //    }
+    //}
 
     public IEnumerator MoveManager()
     {

@@ -65,40 +65,14 @@ public class Linda_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isInRange && Input.GetKeyDown(KeyCode.Space))
+        {
+            StopCoroutine("MoveManager");
+            co.enabled = true;
+            instruction.text = "God help me";
+            StartCoroutine("TalkManager");
 
-
-
-        //if (target != position && !triggered)
-        //{
-        //    anim.CrossFade("Linda_walk", 0);
-        //    position = gameObject.transform.position;
-        //    float step = Time.deltaTime * speed;
-        //    //  Debug.Log(step);
-        //    // anim.CrossFade("Old_Man_Walk", 0);
-
-        //   // Debug.Log(position2.x - gameObject.transform.position.x);
-
-        //    if (position2.x - gameObject.transform.position.x > 0)
-        //    {
-        //        sr.flipX = true;
-
-        //    }
-        //    else
-        //    {
-        //        sr.flipX = false;
-        //    }
-
-        //    transform.position = Vector2.MoveTowards(transform.position, target, step);
-
-        //    //For loop for all of the destination points and create a vector of destinations 
-        //    //Debug.Log("shit");
-        //}
-
-        //else if (!triggered)
-        //{
-        //    anim.CrossFade("Linda_idle", 0);
-        //  //  StartCoroutine("MoveManager");
-        //}
+        }
 
 
         if (triggered)
@@ -207,43 +181,43 @@ public class Linda_script : MonoBehaviour
     {
         GameObject otherGO = other.gameObject;
         //Debug.Log(other);
-        co.enabled = true;
-        instruction.text = "God help me";
-        if (otherGO.name == "Jawsh")
+        if (otherGO.name == "Jawsh" )
         {
             isInRange = true;
-            Debug.Log("Jawsh");
+          //  Debug.Log("Jawsh");
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        GameObject otherGO = other.gameObject;
-        //Debug.Log(other);
-        if (otherGO.name == "Jawsh")
-        {
-            isInRange = false;
-        }
-    }
 
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        GameObject otherGO = other.gameObject;
-        Debug.Log(other);
-        if (otherGO.name == "Jawsh")
-        {
-            isInRange = true;
-        }
-    }
 
-    void OnCollisionExit2D(Collision2D other)
-    {
-        GameObject otherGO = other.gameObject;
-        if (otherGO.name == "Jawsh")
-        {
-            isInRange = false;
-        }
-    }
+    //void OnTriggerExit2D(Collider2D other)
+    //{
+    //    GameObject otherGO = other.gameObject;
+    //    //Debug.Log(other);
+    //    if (otherGO.name == "Jawsh")
+    //    {
+    //        isInRange = false;
+    //    }
+    //}
+
+    //void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    GameObject otherGO = other.gameObject;
+    //    Debug.Log(other);
+    //    if (otherGO.name == "Jawsh")
+    //    {
+    //        isInRange = true;
+    //    }
+    //}
+
+    //void OnCollisionExit2D(Collision2D other)
+    //{
+    //    GameObject otherGO = other.gameObject;
+    //    if (otherGO.name == "Jawsh")
+    //    {
+    //        isInRange = false;
+    //    }
+    //}
 
     public IEnumerator MoveManager()
     {
@@ -269,6 +243,16 @@ public class Linda_script : MonoBehaviour
         StopCoroutine("MoveDestManager");
 
 
+    }
+
+    public IEnumerator TalkManager()
+    {
+        //float f = (int)Random.Range(waitMin, waitMax);
+        float f = 5f;
+        //Debug.Log(f);
+
+        yield return new WaitForSeconds(f);
+        StopCoroutine("TalkManager");
     }
 
 

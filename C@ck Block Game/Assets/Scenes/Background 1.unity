@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -175,6 +175,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4a66e9973629048428cdd87960cd8e3d, type: 3}
     m_FontSize: 36
@@ -12134,6 +12136,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4a66e9973629048428cdd87960cd8e3d, type: 3}
     m_FontSize: 36
@@ -12212,6 +12216,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 035ad42eb21e74a63ab55e1cb7611e27, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -12286,6 +12292,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 035ad42eb21e74a63ab55e1cb7611e27, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -12496,6 +12504,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4a66e9973629048428cdd87960cd8e3d, type: 3}
     m_FontSize: 36
@@ -12563,7 +12573,6 @@ GameObject:
   - component: {fileID: 284685444}
   - component: {fileID: 284685443}
   - component: {fileID: 284685442}
-  - component: {fileID: 284685441}
   - component: {fileID: 284685445}
   m_Layer: 0
   m_Name: Bartender
@@ -12572,38 +12581,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &284685441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284685440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d52398664ab0459ebab6c8a03067b6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  vecArray:
-  - {x: 0, y: 0}
-  - {x: 10, y: 0}
-  - {x: 0, y: 10}
-  - {x: 10, y: 10}
-  waitMin: 3
-  waitMax: 5
-  dest: {x: -10, y: 10}
-  dest2: {x: 9, y: 8}
-  positions:
-  - {x: 57.12, y: -4.5}
-  - {x: 57.12, y: -16.5}
-  - {x: 69, y: -4.5}
-  - {x: 69.6, y: -15.6}
-  destinations: []
-  waitDestTime: 0
-  isInRange: 0
-  triggered: 0
-  FakeProposal: 0
 --- !u!95 &284685442
 Animator:
   serializedVersion: 3
@@ -12687,20 +12664,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &284685445
-CapsuleCollider:
+--- !u!70 &284685445
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284685440}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 43.7
-  m_Height: 54.27
-  m_Direction: 1
-  m_Center: {x: -3.3, y: 0, z: 0}
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 78.2, y: 68.5}
+  m_Direction: 0
 --- !u!1 &290029372
 GameObject:
   m_ObjectHideFlags: 0
@@ -12757,6 +12736,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 035ad42eb21e74a63ab55e1cb7611e27, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -12885,7 +12866,6 @@ GameObject:
   - component: {fileID: 373000500}
   - component: {fileID: 373000499}
   - component: {fileID: 373000498}
-  - component: {fileID: 373000497}
   - component: {fileID: 373000496}
   m_Layer: 0
   m_Name: NormalWoman_Idle2_1_0
@@ -12894,51 +12874,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &373000496
-CapsuleCollider:
+--- !u!70 &373000496
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373000495}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 43.7
-  m_Height: 54.27
-  m_Direction: 1
-  m_Center: {x: -3.3, y: 0, z: 0}
---- !u!114 &373000497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 373000495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01e49debb751d4ae885fa854f049b2a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  vecArray:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  waitMin: 2
-  waitMax: 4
-  dest: {x: 0, y: 0}
-  dest2: {x: 0, y: 0}
-  positions:
-  - {x: -5, y: 0}
-  - {x: 8, y: 3}
-  - {x: 9, y: 3}
-  - {x: 8, y: 1}
-  destinations: []
-  waitDestTime: 0
-  isInRange: 0
-  triggered: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 78.2, y: 68.5}
+  m_Direction: 0
 --- !u!95 &373000498
 Animator:
   serializedVersion: 3
@@ -13077,6 +13028,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4a66e9973629048428cdd87960cd8e3d, type: 3}
     m_FontSize: 36
@@ -13110,7 +13063,6 @@ GameObject:
   - component: {fileID: 439758506}
   - component: {fileID: 439758505}
   - component: {fileID: 439758504}
-  - component: {fileID: 439758503}
   - component: {fileID: 439758502}
   m_Layer: 0
   m_Name: OldWoman (1)
@@ -13119,53 +13071,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &439758502
-CapsuleCollider:
+--- !u!70 &439758502
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439758501}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 43.7
-  m_Height: 50.5
-  m_Direction: 1
-  m_Center: {x: -2.99, y: 0, z: 0}
---- !u!114 &439758503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439758501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63421c86173db417ea198a6a0c7aa21c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  vecArray:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  waitMin: 2
-  waitMax: 7
-  dest: {x: 0, y: 0}
-  dest2: {x: 0, y: 0}
-  positions:
-  - {x: 53.8, y: 8.6}
-  - {x: 49.7, y: 16.9}
-  - {x: 26.1, y: 1.4}
-  - {x: 35.7, y: -2.6}
-  destinations:
-  - {x: 7, y: 10}
-  - {x: 9, y: 2}
-  waitDestTime: 3
-  isInRange: 0
-  triggered: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 78.2, y: 68.5}
+  m_Direction: 0
 --- !u!95 &439758504
 Animator:
   serializedVersion: 3
@@ -13403,6 +13324,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4a66e9973629048428cdd87960cd8e3d, type: 3}
     m_FontSize: 36
@@ -13655,6 +13578,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 035ad42eb21e74a63ab55e1cb7611e27, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -13729,6 +13654,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 035ad42eb21e74a63ab55e1cb7611e27, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -13935,6 +13862,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4a66e9973629048428cdd87960cd8e3d, type: 3}
     m_FontSize: 36
@@ -13968,7 +13897,6 @@ GameObject:
   - component: {fileID: 849804259}
   - component: {fileID: 849804258}
   - component: {fileID: 849804257}
-  - component: {fileID: 849804256}
   - component: {fileID: 849804255}
   m_Layer: 0
   m_Name: youngBoy
@@ -13977,51 +13905,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &849804255
-CapsuleCollider:
+--- !u!70 &849804255
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849804254}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 4.8
-  m_Height: 64
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &849804256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849804254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b2762ae0bddb4f64ba2c38f5ec7dfdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  vecArray:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  waitMin: 2
-  waitMax: 7
-  dest: {x: 0, y: 0}
-  dest2: {x: 0, y: 0}
-  positions:
-  - {x: 9.6, y: 11.3}
-  - {x: 22.7, y: -2.3}
-  - {x: 33.2, y: 6.3}
-  - {x: 19.7, y: -13.1}
-  destinations: []
-  waitDestTime: 0
-  isInRange: 0
-  triggered: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 78.2, y: 68.5}
+  m_Direction: 0
 --- !u!95 &849804257
 Animator:
   serializedVersion: 3
@@ -14160,6 +14059,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 035ad42eb21e74a63ab55e1cb7611e27, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -16433,7 +16334,6 @@ GameObject:
   - component: {fileID: 966560787}
   - component: {fileID: 966560786}
   - component: {fileID: 966560785}
-  - component: {fileID: 966560784}
   m_Layer: 0
   m_Name: youngGirl
   m_TagString: youngGirl
@@ -16441,51 +16341,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &966560784
-MonoBehaviour:
+--- !u!70 &966560785
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966560783}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cfb6b0130a1b40c89f656cb92ecf07e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  vecArray:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  waitMin: 2
-  waitMax: 7
-  dest: {x: 0, y: 0}
-  dest2: {x: 0, y: 0}
-  positions:
-  - {x: -9.71, y: 11.83}
-  - {x: 26.33, y: 12.44}
-  - {x: 26.33, y: -4.1}
-  - {x: 4.3, y: -3.2}
-  destinations: []
-  waitDestTime: 0
-  isInRange: 0
-  triggered: 0
---- !u!136 &966560785
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966560783}
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 3.93
-  m_Height: 64
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 78.2, y: 68.5}
+  m_Direction: 0
 --- !u!95 &966560786
 Animator:
   serializedVersion: 3
@@ -16580,7 +16451,6 @@ GameObject:
   - component: {fileID: 985261547}
   - component: {fileID: 985261546}
   - component: {fileID: 985261545}
-  - component: {fileID: 985261544}
   - component: {fileID: 985261548}
   m_Layer: 0
   m_Name: Linda
@@ -16589,37 +16459,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &985261544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985261543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cad46f781208141a4916b6d7067ac79d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  vecArray:
-  - {x: 0, y: 0}
-  - {x: 0, y: -10}
-  - {x: 10, y: 0}
-  - {x: 10, y: 10}
-  waitMin: 2
-  waitMax: 3
-  dest: {x: 12, y: 12}
-  dest2: {x: 0, y: 0}
-  positions:
-  - {x: 0, y: 0}
-  - {x: 12, y: 0}
-  - {x: 0, y: 12}
-  - {x: 12, y: 12}
-  destinations: []
-  waitDestTime: 0
-  isInRange: 0
-  triggered: 0
 --- !u!95 &985261545
 Animator:
   serializedVersion: 3
@@ -16702,20 +16541,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &985261548
-CapsuleCollider:
+--- !u!70 &985261548
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985261543}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 43.7
-  m_Height: 78.8
-  m_Direction: 1
-  m_Center: {x: -2.99, y: 0, z: 0}
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 78.2, y: 68.5}
+  m_Direction: 0
 --- !u!1 &995046349
 GameObject:
   m_ObjectHideFlags: 0
@@ -16771,6 +16612,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4a66e9973629048428cdd87960cd8e3d, type: 3}
     m_FontSize: 36
@@ -16849,6 +16692,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 035ad42eb21e74a63ab55e1cb7611e27, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -16922,6 +16767,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4a66e9973629048428cdd87960cd8e3d, type: 3}
     m_FontSize: 36
@@ -17033,6 +16880,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4a66e9973629048428cdd87960cd8e3d, type: 3}
     m_FontSize: 36
@@ -17199,7 +17048,6 @@ GameObject:
   - component: {fileID: 1141921790}
   - component: {fileID: 1141921789}
   - component: {fileID: 1141921788}
-  - component: {fileID: 1141921787}
   - component: {fileID: 1141921786}
   m_Layer: 0
   m_Name: youngBoy (1)
@@ -17208,51 +17056,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1141921786
-CapsuleCollider:
+--- !u!70 &1141921786
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141921785}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 4.8
-  m_Height: 64
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1141921787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141921785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b2762ae0bddb4f64ba2c38f5ec7dfdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  vecArray:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  waitMin: 2
-  waitMax: 7
-  dest: {x: 0, y: 0}
-  dest2: {x: 0, y: 0}
-  positions:
-  - {x: 41, y: 9.2}
-  - {x: 28.6, y: 13.9}
-  - {x: 7.1, y: 6.2}
-  - {x: -11.9, y: -13.5}
-  destinations: []
-  waitDestTime: 0
-  isInRange: 0
-  triggered: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 78.2, y: 68.5}
+  m_Direction: 0
 --- !u!95 &1141921788
 Animator:
   serializedVersion: 3
@@ -110015,7 +109834,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226420632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 23.7, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -110076,6 +109895,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4a66e9973629048428cdd87960cd8e3d, type: 3}
     m_FontSize: 36
@@ -113874,7 +113695,6 @@ GameObject:
   - component: {fileID: 1474021374}
   - component: {fileID: 1474021373}
   - component: {fileID: 1474021372}
-  - component: {fileID: 1474021371}
   - component: {fileID: 1474021375}
   m_Layer: 0
   m_Name: Todd
@@ -113883,37 +113703,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1474021371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474021370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9e914deded784df3a4e92e7ab2f8afc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  vecArray:
-  - {x: -10, y: 0}
-  - {x: -20, y: 0}
-  - {x: 0, y: 10}
-  - {x: 10, y: -20}
-  waitMin: 2
-  waitMax: 4
-  dest: {x: 0, y: 0}
-  dest2: {x: 0, y: 0}
-  positions:
-  - {x: 12, y: 0}
-  - {x: 12, y: 5}
-  - {x: 0, y: 12}
-  - {x: 12, y: 7}
-  destinations: []
-  waitDestTime: 0
-  isInRange: 0
-  triggered: 0
 --- !u!95 &1474021372
 Animator:
   serializedVersion: 3
@@ -113997,20 +113786,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1474021375
-CapsuleCollider:
+--- !u!70 &1474021375
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474021370}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 43.7
-  m_Height: 51.7
-  m_Direction: 1
-  m_Center: {x: -3, y: 0, z: 0}
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 78.2, y: 68.5}
+  m_Direction: 0
 --- !u!1 &1512034769
 GameObject:
   m_ObjectHideFlags: 0
@@ -114166,6 +113957,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 035ad42eb21e74a63ab55e1cb7611e27, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -114197,12 +113990,12 @@ GameObject:
   - component: {fileID: 1522493148}
   - component: {fileID: 1522493147}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: DialogCanvas
   m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1522493147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114338,6 +114131,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4a66e9973629048428cdd87960cd8e3d, type: 3}
     m_FontSize: 36
@@ -114515,6 +114310,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 035ad42eb21e74a63ab55e1cb7611e27, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -114755,7 +114552,6 @@ GameObject:
   - component: {fileID: 1806269535}
   - component: {fileID: 1806269534}
   - component: {fileID: 1806269533}
-  - component: {fileID: 1806269532}
   m_Layer: 0
   m_Name: youngGirl (1)
   m_TagString: youngGirl
@@ -114763,51 +114559,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1806269532
-MonoBehaviour:
+--- !u!70 &1806269533
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806269531}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cfb6b0130a1b40c89f656cb92ecf07e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  vecArray:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  waitMin: 2
-  waitMax: 7
-  dest: {x: 0, y: 0}
-  dest2: {x: 0, y: 0}
-  positions:
-  - {x: -12.3, y: 17.1}
-  - {x: -16.5, y: 2.5}
-  - {x: 1.2, y: -11.3}
-  - {x: 16.5, y: -1.5}
-  destinations: []
-  waitDestTime: 0
-  isInRange: 0
-  triggered: 0
---- !u!136 &1806269533
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1806269531}
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 3.93
-  m_Height: 64
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 78.2, y: 68.5}
+  m_Direction: 0
 --- !u!95 &1806269534
 Animator:
   serializedVersion: 3
@@ -114902,7 +114669,6 @@ GameObject:
   - component: {fileID: 1811313107}
   - component: {fileID: 1811313106}
   - component: {fileID: 1811313105}
-  - component: {fileID: 1811313104}
   - component: {fileID: 1811313109}
   - component: {fileID: 1811313108}
   m_Layer: 0
@@ -114912,39 +114678,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1811313104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811313103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63421c86173db417ea198a6a0c7aa21c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  vecArray:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  waitMin: 2
-  waitMax: 7
-  dest: {x: 0, y: 0}
-  dest2: {x: 0, y: 0}
-  positions:
-  - {x: 20.75, y: 26.83}
-  - {x: 19.9, y: 42.85}
-  - {x: -0.2, y: 37.8}
-  - {x: 0.8, y: 32.1}
-  destinations:
-  - {x: 7, y: 10}
-  - {x: 9, y: 2}
-  waitDestTime: 3
-  isInRange: 0
-  triggered: 0
 --- !u!95 &1811313105
 Animator:
   serializedVersion: 3
@@ -115021,7 +114754,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811313103}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8, y: 21.4, z: -3}
+  m_LocalPosition: {x: -2.5, y: 33.6, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.15}
   m_Children:
   - {fileID: 1512034770}
@@ -115064,6 +114797,28 @@ MonoBehaviour:
   - Fuck off
   - Prick
   - Suck my dick
+  speed: 10
+  vecArray:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  waitMin: 4
+  waitMax: 6
+  dest: {x: 0, y: 0}
+  dest2: {x: 0, y: 0}
+  positions:
+  - {x: 0.8, y: 21.4}
+  - {x: 21, y: 21.4}
+  - {x: 21, y: 33.6}
+  - {x: -2.5, y: 33.6}
+  destinations: []
+  waitDestTime: 0
+  animations:
+  - OldWoman_Walk
+  - oldWoman_Idle
+  - oldWoman_Talk
+  triggered: 0
 --- !u!213 &1886190617
 Sprite:
   m_ObjectHideFlags: 0
@@ -115639,6 +115394,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 035ad42eb21e74a63ab55e1cb7611e27, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -115713,6 +115470,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 035ad42eb21e74a63ab55e1cb7611e27, type: 3}
   m_Type: 0
   m_PreserveAspect: 1

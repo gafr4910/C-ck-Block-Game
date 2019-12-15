@@ -159,58 +159,7 @@ public class BarScript : MonoBehaviour
         }
 
 
-        //else if(triggered && position == dest && dest2!=null)
-        // {
-        //     Debug.Log("nice");
-        //     position = gameObject.transform.position;
-        //     float step = Time.deltaTime * speed;
-        //     transform.position = Vector2.MoveTowards(transform.position, dest2, step);
-
-        // }
-
-
-
-        //else if(triggered)
-        //{
-        //    StartCoroutine("MoveSomewhere");
-        //}
-
-        // if (transform.position==target)
-        //{
-
-
-        //}
-
-
-        //ExitPosition = Vector2(xPos, yPos);
-
-        //transform.position = new Vector3(xPos, yPos, 0);
-
-        //if (transform.position.x < 3.0f)
-        //{
-        //transform.position.x += moveForce * Time.deltaTime;
-
-        //transform.position = Vector2.Lerp(transform.position , ExitPosition, speed * Time.deltaTime);
-
-        //transform.position = new Vector2(xPos, yPos);
-
-        //}
     }
-
-    //public IEnumerator MoveSomewhere()
-    //{
-    //    float f = (int)Random.Range(waitMin, waitMax);
-
-    //    //Debug.Log(f);
-    //     yield return new WaitForSeconds(f);
-
-    //    Vector2 dest = new Vector2(12f, 12f);
-
-    //    StopCoroutine("MoveSomewhere");
-
-    //    //yield return null;
-
-    //}
 
 
     void OnTriggerEnter2D(Collider2D other)

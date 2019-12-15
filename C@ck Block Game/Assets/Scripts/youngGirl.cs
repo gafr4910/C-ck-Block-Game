@@ -223,9 +223,10 @@ public class youngGirl : MonoBehaviour
     {
         GameObject otherGO = other.gameObject;
         //Debug.Log(other);
-        co.enabled = true;
-        instruction.text = "God help me";
-        Debug.Log("1");
+       // co.enabled = true;
+       // instruction.text = "God help me";
+        //Debug.Log("1");
+
         if (otherGO.name == "Jawsh")
         {
             isInRange = true;
