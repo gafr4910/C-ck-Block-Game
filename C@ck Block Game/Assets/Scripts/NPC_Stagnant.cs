@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPC_Interaction : MonoBehaviour
+public class NPC_Stagnant : MonoBehaviour
 {
 
     private Animator anim;
@@ -18,7 +18,7 @@ public class NPC_Interaction : MonoBehaviour
     //public bool isPickedUp = false;
     public string[] barks;
 
- 
+
 
     public float speed = 8;
     public Vector2[] vecArray = new Vector2[4];
@@ -59,9 +59,6 @@ public class NPC_Interaction : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         //co = GameObject.Find("DialogCanvas").GetComponent<Canvas>();
         //instruction = GameObject.Find("/DialogCanvas/Image/Text").GetComponent<Text>();
-
-
-
         //ExitPosition = new Vector2(2, 2);
 
         vecArray[0] = new Vector2(0f, 0f);
@@ -75,55 +72,55 @@ public class NPC_Interaction : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(isInRange);
-        if(isInRange && Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("yep");
-            //isPickedUp = true;
-            //this.gameObject.SetActive(false);
-            textbox.enabled = true;
-            text.enabled = true;
-            int rand = Random.Range(0, barks.Length);
-            text.text = barks[rand];
-            Invoke("ClearText", 5);
-            Debug.Log("1?");
-        }
+		//Debug.Log(isInRange);
+		if (isInRange && Input.GetKeyDown(KeyCode.Space))
+		{
+			Debug.Log("yep");
+			//isPickedUp = true;
+			//this.gameObject.SetActive(false);
+			textbox.enabled = true;
+			text.enabled = true;
+			int rand = Random.Range(0, barks.Length);
+			text.text = barks[rand];
+			Invoke("ClearText", 5);
+			Debug.Log("1?");
+		}
 
-        if (target != position && !triggered)
-        {
-            //Debug.Log("2: " );
-            anim.CrossFade(animations[0], 0);
-            position = gameObject.transform.position;
-            float step = Time.deltaTime * speed;
-            //  Debug.Log(step);
-            // anim.CrossFade("Old_Man_Walk", 0);
+		//if (target != position && !triggered)
+		//{
+		//    Debug.Log("2: ");
+		//    anim.CrossFade(animations[0], 0);
+		//    position = gameObject.transform.position;
+		//    float step = Time.deltaTime * speed;
+		//    //  Debug.Log(step);
+		//    // anim.CrossFade("Old_Man_Walk", 0);
 
-            // Debug.Log(position2.x - gameObject.transform.position.x);
+		//    // Debug.Log(position2.x - gameObject.transform.position.x);
 
-            if (position2.x - gameObject.transform.position.x > 0)
-            {
-                sr.flipX = true;
+		//    if (position2.x - gameObject.transform.position.x > 0)
+		//    {
+		//        sr.flipX = true;
 
-            }
-            else
-            {
-                sr.flipX = false;
-            }
+		//    }
+		//    else
+		//    {
+		//        sr.flipX = false;
+		//    }
 
-            transform.position = Vector2.MoveTowards(transform.position, target, step);
+		//    transform.position = Vector2.MoveTowards(transform.position, target, step);
 
-            //For loop for all of the destination points and create a vector of destinations 
-            //Debug.Log("shit");
-        }
+		//    //For loop for all of the destination points and create a vector of destinations 
+		//    //Debug.Log("shit");
+		//}
 
-        else if (!triggered)
-        {
-            anim.CrossFade(animations[1], 0);
-            StartCoroutine("MoveManager");
-        }
+		//else if (!triggered)
+		//{
+		//    anim.CrossFade(animations[1], 0);
+		//    StartCoroutine("MoveManager");
+		//}
 
 
-        if (triggered)
+		if (triggered)
         {
 
             //anim.CrossFade("Old_woman", 0);
@@ -166,18 +163,18 @@ public class NPC_Interaction : MonoBehaviour
 
 
             }
-   
+
 
         }
 
-     
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         GameObject otherGO = other.gameObject;
         //Debug.Log(other);
-        if(otherGO.name == "Jawsh")
+        if (otherGO.name == "Jawsh")
         {
             isInRange = true;
         }
@@ -187,7 +184,7 @@ public class NPC_Interaction : MonoBehaviour
     {
         GameObject otherGO = other.gameObject;
         //Debug.Log(other);
-        if(otherGO.name == "Jawsh")
+        if (otherGO.name == "Jawsh")
         {
             isInRange = false;
         }
@@ -197,7 +194,7 @@ public class NPC_Interaction : MonoBehaviour
     {
         GameObject otherGO = other.gameObject;
         //Debug.Log(other);
-        if(otherGO.name == "Jawsh")
+        if (otherGO.name == "Jawsh")
         {
             isInRange = true;
         }
@@ -206,7 +203,7 @@ public class NPC_Interaction : MonoBehaviour
     void OnCollisionExit2D(Collision2D other)
     {
         GameObject otherGO = other.gameObject;
-        if(otherGO.name == "Jawsh")
+        if (otherGO.name == "Jawsh")
         {
             isInRange = false;
         }
@@ -257,34 +254,34 @@ public class NPC_Interaction : MonoBehaviour
 
 
         if (i == 0)
-        { 
+        {
             vecArray[0] = positions[0];
 
-          
+
             count = 0;
 
         }
 
         else if (i == 1)
         {
-           
+
             vecArray[1] = positions[1];
-           
+
             count = 1;
 
 
         }
         else if (i == 2)
         {
-            
+
             vecArray[2] = positions[2];
-            
+
             count = 2;
 
         }
         else if (i == 3)
         {
-    
+
 
             vecArray[3] = positions[3];
             count = 3;
@@ -296,4 +293,5 @@ public class NPC_Interaction : MonoBehaviour
     }
 
 }
+
 

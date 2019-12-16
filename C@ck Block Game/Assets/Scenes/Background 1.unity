@@ -12574,6 +12574,7 @@ GameObject:
   - component: {fileID: 284685443}
   - component: {fileID: 284685442}
   - component: {fileID: 284685445}
+  - component: {fileID: 284685441}
   m_Layer: 0
   m_Name: Bartender
   m_TagString: Bartender
@@ -12581,6 +12582,48 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &284685441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284685440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbf3a2fc089b4b809124fd670caa69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbox: {fileID: 2080167580}
+  text: {fileID: 262882167}
+  npcName: 
+  isInRange: 0
+  barks:
+  - God I could go for some nachos...
+  - I really hope there arent laxatives in the nachos
+  - Need a drink?
+  speed: 10
+  vecArray:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  waitMin: 4
+  waitMax: 6
+  dest: {x: 0, y: 0}
+  dest2: {x: 0, y: 0}
+  positions:
+  - {x: 43.3, y: -11.2}
+  - {x: 43.3, y: -2.1}
+  - {x: 55.7, y: -2.1}
+  - {x: 55.7, y: -10.2}
+  destinations: []
+  waitDestTime: 0
+  animations:
+  - Old_walk
+  - old_Idle
+  - old_Talk
+  triggered: 0
 --- !u!95 &284685442
 Animator:
   serializedVersion: 3
@@ -12657,7 +12700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284685440}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 43.3, y: -11.2, z: 0}
+  m_LocalPosition: {x: 55.7, y: -10.2, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 816870888}
@@ -12867,6 +12910,7 @@ GameObject:
   - component: {fileID: 373000499}
   - component: {fileID: 373000498}
   - component: {fileID: 373000496}
+  - component: {fileID: 373000497}
   m_Layer: 0
   m_Name: NormalWoman_Idle2_1_0
   m_TagString: marriedLady
@@ -12890,6 +12934,42 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 78.2, y: 68.5}
   m_Direction: 0
+--- !u!114 &373000497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373000495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8316f5a58526840738f8c812ad73f4d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbox: {fileID: 2080167580}
+  text: {fileID: 262882167}
+  npcName: 
+  isInRange: 0
+  barks:
+  - Get me another martini. Extra dirty I cannot even explain how shaken like a fucking
+    washing machine.
+  - I could really cheat on my fiance tonight.
+  - Your not the most good looking bloke are you.
+  speed: 8
+  vecArray:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  waitMin: 2
+  waitMax: 4
+  dest: {x: 0, y: 0}
+  dest2: {x: 0, y: 0}
+  positions: []
+  destinations: []
+  waitDestTime: 0
+  animations: []
+  triggered: 0
 --- !u!95 &373000498
 Animator:
   serializedVersion: 3
@@ -13064,6 +13144,7 @@ GameObject:
   - component: {fileID: 439758505}
   - component: {fileID: 439758504}
   - component: {fileID: 439758502}
+  - component: {fileID: 439758503}
   m_Layer: 0
   m_Name: OldWoman (1)
   m_TagString: oldWoman
@@ -13085,8 +13166,50 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 78.2, y: 68.5}
+  m_Size: {x: 57.11, y: 68.5}
   m_Direction: 0
+--- !u!114 &439758503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439758501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbf3a2fc089b4b809124fd670caa69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbox: {fileID: 2080167580}
+  text: {fileID: 262882167}
+  npcName: 
+  isInRange: 0
+  barks:
+  - I am so glad I get walk near the bathrooms forever
+  - I dont do much around here
+  - I am fucking hammered
+  speed: 10
+  vecArray:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  waitMin: 4
+  waitMax: 6
+  dest: {x: 0, y: 0}
+  dest2: {x: 0, y: 0}
+  positions:
+  - {x: 39.3, y: 7.1}
+  - {x: 56.2, y: 7.1}
+  - {x: 56.2, y: 17.3}
+  - {x: 35.1, y: 17.3}
+  destinations: []
+  waitDestTime: 0
+  animations:
+  - OldWoman_Walk
+  - oldWoman_Idle
+  - oldWoman_Talk
+  triggered: 0
 --- !u!95 &439758504
 Animator:
   serializedVersion: 3
@@ -13163,7 +13286,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439758501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.7, y: -2.6, z: -3}
+  m_LocalPosition: {x: 35.1, y: 17.3, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.15}
   m_Children:
   - {fileID: 1066148526}
@@ -13898,6 +14021,7 @@ GameObject:
   - component: {fileID: 849804258}
   - component: {fileID: 849804257}
   - component: {fileID: 849804255}
+  - component: {fileID: 849804256}
   m_Layer: 0
   m_Name: youngBoy
   m_TagString: youngBoy
@@ -13919,8 +14043,50 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 78.2, y: 68.5}
+  m_Size: {x: 57.11, y: 68.5}
   m_Direction: 0
+--- !u!114 &849804256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849804254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbf3a2fc089b4b809124fd670caa69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbox: {fileID: 2080167580}
+  text: {fileID: 262882167}
+  npcName: 
+  isInRange: 0
+  barks:
+  - That girl at the bar is eyeing me down
+  - 'You think I have a chance? '
+  - She has a ring on though...
+  speed: 10
+  vecArray:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  waitMin: 4
+  waitMax: 6
+  dest: {x: 0, y: 0}
+  dest2: {x: 0, y: 0}
+  positions:
+  - {x: 14, y: -10.5}
+  - {x: 19.7, y: 0.6}
+  - {x: 34.5, y: 0.6}
+  - {x: 28.5, y: -10.5}
+  destinations: []
+  waitDestTime: 0
+  animations:
+  - youngBoy_Walk
+  - young_Boy
+  - youngBoy_Talk
+  triggered: 0
 --- !u!95 &849804257
 Animator:
   serializedVersion: 3
@@ -13997,7 +14163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849804254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.7, y: -13.1, z: 0}
+  m_LocalPosition: {x: 14, y: -10.5, z: 0}
   m_LocalScale: {x: 0.1, y: 0.12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16334,6 +16500,7 @@ GameObject:
   - component: {fileID: 966560787}
   - component: {fileID: 966560786}
   - component: {fileID: 966560785}
+  - component: {fileID: 966560784}
   m_Layer: 0
   m_Name: youngGirl
   m_TagString: youngGirl
@@ -16341,6 +16508,48 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &966560784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966560783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbf3a2fc089b4b809124fd670caa69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbox: {fileID: 2080167580}
+  text: {fileID: 262882167}
+  npcName: 
+  isInRange: 0
+  barks:
+  - Fuck off
+  - Prick
+  - Suck my dick
+  speed: 10
+  vecArray:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  waitMin: 4
+  waitMax: 6
+  dest: {x: 0, y: 0}
+  dest2: {x: 0, y: 0}
+  positions:
+  - {x: -8.9, y: -3.2}
+  - {x: -10.8, y: 14.7}
+  - {x: 11.5, y: 11.3}
+  - {x: 25.1, y: 11.3}
+  destinations: []
+  waitDestTime: 0
+  animations:
+  - youngGirl_Walk
+  - youngGirl
+  - youngGirl_Talk
+  triggered: 0
 --- !u!70 &966560785
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -16355,7 +16564,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 78.2, y: 68.5}
+  m_Size: {x: 57.11, y: 68.5}
   m_Direction: 0
 --- !u!95 &966560786
 Animator:
@@ -16433,7 +16642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966560783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.3, y: -3.2, z: 0}
+  m_LocalPosition: {x: 25.1, y: 11.3, z: 0}
   m_LocalScale: {x: 0.1, y: 0.12, z: 1}
   m_Children:
   - {fileID: 344726340}
@@ -16452,6 +16661,7 @@ GameObject:
   - component: {fileID: 985261546}
   - component: {fileID: 985261545}
   - component: {fileID: 985261548}
+  - component: {fileID: 985261544}
   m_Layer: 0
   m_Name: Linda
   m_TagString: Linda
@@ -16459,6 +16669,44 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &985261544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985261543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8316f5a58526840738f8c812ad73f4d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbox: {fileID: 2080167580}
+  text: {fileID: 262882167}
+  npcName: 
+  isInRange: 0
+  barks:
+  - 'I was ranked top 3000 in ping pong in high school. '
+  - Ketchup is pretty spicy
+  - I don't think my work is a pyrimad scheme, but I do sell face products.
+  - I'd say I'm a 6.78 out of 10.
+  - Why did you bring me to a bar on our first date?
+  - You never take me dancing.
+  speed: 8
+  vecArray:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  waitMin: 2
+  waitMax: 4
+  dest: {x: 0, y: 0}
+  dest2: {x: 0, y: 0}
+  positions: []
+  destinations: []
+  waitDestTime: 0
+  animations: []
+  triggered: 0
 --- !u!95 &985261545
 Animator:
   serializedVersion: 3
@@ -16534,13 +16782,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985261543}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.008727774, y: -0, z: -0, w: 0.9999619}
   m_LocalPosition: {x: -9.4, y: -9, z: -3}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1, y: 0, z: 0}
 --- !u!70 &985261548
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -16555,7 +16803,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 78.2, y: 68.5}
+  m_Size: {x: 48.2, y: 68.5}
   m_Direction: 0
 --- !u!1 &995046349
 GameObject:
@@ -17049,6 +17297,7 @@ GameObject:
   - component: {fileID: 1141921789}
   - component: {fileID: 1141921788}
   - component: {fileID: 1141921786}
+  - component: {fileID: 1141921787}
   m_Layer: 0
   m_Name: youngBoy (1)
   m_TagString: youngBoy
@@ -17070,8 +17319,50 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 78.2, y: 68.5}
+  m_Size: {x: 57.11, y: 68.5}
   m_Direction: 0
+--- !u!114 &1141921787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141921785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbf3a2fc089b4b809124fd670caa69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbox: {fileID: 2080167580}
+  text: {fileID: 262882167}
+  npcName: 
+  isInRange: 0
+  barks:
+  - I am a child
+  - 'How did I get in here? '
+  - Suck my dick
+  speed: 10
+  vecArray:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  waitMin: 4
+  waitMax: 6
+  dest: {x: 0, y: 0}
+  dest2: {x: 0, y: 0}
+  positions:
+  - {x: -11.9, y: -13.5}
+  - {x: 1.1, y: -11.4}
+  - {x: 1.1, y: 10.6}
+  - {x: -13.7, y: 1}
+  destinations: []
+  waitDestTime: 0
+  animations:
+  - youngBoy_Walk
+  - youngBoy
+  - youngBoy_Talk
+  triggered: 0
 --- !u!95 &1141921788
 Animator:
   serializedVersion: 3
@@ -17148,7 +17439,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141921785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.9, y: -13.5, z: 0}
+  m_LocalPosition: {x: -13.7, y: 1, z: 0}
   m_LocalScale: {x: 0.1, y: 0.12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -109834,7 +110125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226420632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 23.7, z: 0}
+  m_LocalPosition: {x: -9.6, y: -0.5, z: 23.8}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -113696,6 +113987,7 @@ GameObject:
   - component: {fileID: 1474021373}
   - component: {fileID: 1474021372}
   - component: {fileID: 1474021375}
+  - component: {fileID: 1474021371}
   m_Layer: 0
   m_Name: Todd
   m_TagString: Todd
@@ -113703,6 +113995,44 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1474021371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474021370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8316f5a58526840738f8c812ad73f4d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbox: {fileID: 2080167580}
+  text: {fileID: 262882167}
+  npcName: 
+  isInRange: 0
+  barks:
+  - Wow Linda you are so funny. *Heavy Sigh*
+  - Why are you standing the other way?
+  - Yeah I was almost all conference in lacrosse
+  - I only listen to Mash Smouth
+  - Im really into collectable root beer bottles
+  - Yeah for work as an ameteur cat herder
+  speed: 8
+  vecArray:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  waitMin: 2
+  waitMax: 4
+  dest: {x: 0, y: 0}
+  dest2: {x: 0, y: 0}
+  positions: []
+  destinations: []
+  waitDestTime: 0
+  animations: []
+  triggered: 0
 --- !u!95 &1474021372
 Animator:
   serializedVersion: 3
@@ -113800,7 +114130,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 78.2, y: 68.5}
+  m_Size: {x: 45.24, y: 68.5}
   m_Direction: 0
 --- !u!1 &1512034769
 GameObject:
@@ -113995,7 +114325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1522493147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114552,6 +114882,7 @@ GameObject:
   - component: {fileID: 1806269535}
   - component: {fileID: 1806269534}
   - component: {fileID: 1806269533}
+  - component: {fileID: 1806269532}
   m_Layer: 0
   m_Name: youngGirl (1)
   m_TagString: youngGirl
@@ -114559,6 +114890,48 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1806269532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806269531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbf3a2fc089b4b809124fd670caa69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbox: {fileID: 2080167580}
+  text: {fileID: 262882167}
+  npcName: 
+  isInRange: 0
+  barks:
+  - 
+  - Prick
+  - Suck my dick
+  speed: 10
+  vecArray:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  waitMin: 4
+  waitMax: 6
+  dest: {x: 0, y: 0}
+  dest2: {x: 0, y: 0}
+  positions:
+  - {x: 6.6, y: -7.5}
+  - {x: -4.7, y: -7.5}
+  - {x: 29.1, y: 5.9}
+  - {x: 14.9, y: 5.9}
+  destinations: []
+  waitDestTime: 0
+  animations:
+  - youngGirl_Walk
+  - youngGirl
+  - youngGirl_Talk
+  triggered: 0
 --- !u!70 &1806269533
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -114573,7 +114946,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 78.2, y: 68.5}
+  m_Size: {x: 57.11, y: 68.5}
   m_Direction: 0
 --- !u!95 &1806269534
 Animator:
@@ -114651,7 +115024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806269531}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.5, y: -1.5, z: 0}
+  m_LocalPosition: {x: 14.9, y: 5.9, z: 0}
   m_LocalScale: {x: 0.1, y: 0.12, z: 1}
   m_Children:
   - {fileID: 1578320988}
@@ -114775,7 +115148,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -5.7, y: 0}
-  m_Size: {x: 89.16, y: 64}
+  m_Size: {x: 57.11, y: 64}
   m_Direction: 0
 --- !u!114 &1811313109
 MonoBehaviour:
@@ -114795,8 +115168,8 @@ MonoBehaviour:
   isInRange: 0
   barks:
   - Fuck off
-  - Prick
-  - Suck my dick
+  - This be my kitchen
+  - I make the best nachos in town
   speed: 10
   vecArray:
   - {x: 0, y: 0}
