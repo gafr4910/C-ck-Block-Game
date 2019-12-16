@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,16 @@ public class Item : MonoBehaviour
     public bool isInRange = false;
     public bool isPickedUp = false;
     public bool isDisguise = false;
-    
+
+    //Sound Stuff
+    public AudioClip Pickup;
+    private AudioSource source;
+
+    private void Awake() //Sound Stuff
+    {
+        source = GetComponent<AudioSource>();
+    }
+
     void Start()
     {
         itemName = name;
@@ -21,6 +31,10 @@ public class Item : MonoBehaviour
         {
             //Debug.Log("yep");
             isPickedUp = true;
+            //Sound
+            source.PlayOneShot(Pickup, 1f);
+            Debug.Log("Picked Up Sound Play");
+            
             //this.gameObject.SetActive(false);
             SpriteRenderer sprite = this.gameObject.GetComponent<SpriteRenderer>();
             sprite.enabled = false;
