@@ -91,7 +91,7 @@ public class NPC_Interaction : MonoBehaviour
 
         if (target != position && !triggered)
         {
-            Debug.Log("2: " );
+            //Debug.Log("2: " );
             anim.CrossFade(animations[0], 0);
             position = gameObject.transform.position;
             float step = Time.deltaTime * speed;
