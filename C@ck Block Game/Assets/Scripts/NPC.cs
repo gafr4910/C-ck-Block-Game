@@ -82,7 +82,10 @@ public class NPC : MonoBehaviour
             }
         }
 
-        if (isInRange && Input.GetKeyDown(KeyCode.Space) && (tag == "Todd" || tag == "Linda") && FakeProposalReady)
+        GameObject j = GameObject.Find("Jawsh");
+        JawshMovement jMove = j.GetComponent<JawshMovement>();
+
+        if (isInRange && jMove.isDisguisedAsWaiter && Input.GetKeyDown(KeyCode.Space) && (tag == "Todd" || tag == "Linda") && FakeProposalReady)
         {
             triggered = true;
             if (tag == "Todd")
