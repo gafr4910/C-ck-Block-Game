@@ -16,6 +16,7 @@ public class ItemController : MonoBehaviour
 
     private bool allPickedUpFP = true;
     private bool allPickedUpOC = true;
+    private bool bothTalkedTo = true;
 
     //UI Variables
     public GameObject UIWaiterBundle;
@@ -93,6 +94,28 @@ public class ItemController : MonoBehaviour
         else if(!allPickedUpFP)
         {
             allPickedUpFP = true;
+        }
+
+
+        foreach (GameObject n in OperationCheatNPCs)
+        {
+            NPC npcScript = n.GetComponent<NPC>();
+            if(n.tag == "youngBoy" && npcScript.yBTalked)
+            {
+                bothTalkedTo = false;
+            }
+            if(n.tag == "marriedLady" && npcScript.mLTalked)
+            {
+                bothTalkedTo = false;
+            }
+        }
+
+        if(bothTalkedTo)
+        {
+            NPC npcScript = OperationCheatNPCs[0].GetComponent<NPC>();
+            npcScript.triggered = true;
+            SpriteRenderer sr = OperationCheatItems[0].GetComponent<SpriteRenderer>();
+            sr.enabled = true;
         }
 
         foreach (GameObject i in OperationCheatItems)

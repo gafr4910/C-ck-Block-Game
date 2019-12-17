@@ -29,6 +29,11 @@ public class NPC : MonoBehaviour
     private int index = 0;
     public bool triggered = false;
 
+    public int yBTalkNum;
+    public int mLTalkNum;
+    public bool yBTalked = false;
+    public bool mLTalked = false;
+
 
     void Start()
     {
@@ -42,6 +47,15 @@ public class NPC : MonoBehaviour
         position = gameObject.transform.position;
         target = ChooseDirection();
 
+        if(target.x - position.x > 0)
+        {
+            sr.flipX = false;
+        }
+        else
+        {
+            sr.flipX = true;
+        }
+
         index = 0;
     }
 
@@ -54,6 +68,15 @@ public class NPC : MonoBehaviour
             int rand = Random.Range(0, barks.Length);
             text.text = barks[rand];
             Invoke("ClearText", 5);
+            
+            if(tag == "youngBoy" && rand == yBTalkNum && !yBTalked)
+            {
+                yBTalked = true;
+            }
+            if(tag == "marriedLady" && rand == mLTalkNum && !mLTalked)
+            {
+                mLTalked = true;
+            }
         }
 
         if (target != position && !triggered)
