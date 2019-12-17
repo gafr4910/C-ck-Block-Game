@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemController : MonoBehaviour
 {
@@ -16,6 +17,16 @@ public class ItemController : MonoBehaviour
     private bool allPickedUpFP = true;
     private bool allPickedUpOC = true;
 
+    //UI Variables
+    public GameObject UIWaiterBundle;
+    public Sprite SpriteWaiterBundle;
+    public GameObject UIFlowers;
+    public Sprite SpriteFlowers;
+    public GameObject UIChampagne;
+    public Sprite SpriteChampagne;
+    public GameObject UIRing;
+    public Sprite SpriteRing;
+
     void Update()
     {
         foreach(GameObject i in Items)
@@ -26,6 +37,35 @@ public class ItemController : MonoBehaviour
                 GameObject j = GameObject.Find("Jawsh");
                 JawshMovement jMove = j.GetComponent<JawshMovement>();
                 jMove.hasWaiterDisguise = true;
+            }
+
+            //UI Check
+            GameObject checkWaiterBundle = GameObject.Find("Waiter Bundle");
+            Item itemScript1 = checkWaiterBundle.GetComponent<Item>();
+            if (itemScript1.isPickedUp)
+            {
+                UIWaiterBundle.GetComponent<Image>().overrideSprite = SpriteWaiterBundle;
+            }
+
+            GameObject checkFlowers = GameObject.Find("Flowers");
+            Item itemScript2 = checkFlowers.GetComponent<Item>();
+            if (itemScript2.isPickedUp)
+            {
+                UIFlowers.GetComponent<Image>().overrideSprite = SpriteFlowers;
+            }
+
+            GameObject checkChampagne = GameObject.Find("Champagne");
+            Item itemScript3 = checkChampagne.GetComponent<Item>();
+            if (itemScript3.isPickedUp)
+            {
+                UIChampagne.GetComponent<Image>().overrideSprite = SpriteChampagne;
+            }
+
+            GameObject checkRing = GameObject.Find("Ring");
+            Item itemScript4 = checkRing.GetComponent<Item>();
+            if (itemScript4.isPickedUp)
+            {
+                UIRing.GetComponent<Image>().overrideSprite = SpriteRing;
             }
         }
 
