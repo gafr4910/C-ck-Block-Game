@@ -18,8 +18,6 @@ public class NPC_Interaction : MonoBehaviour
     //public bool isPickedUp = false;
     public string[] barks;
 
- 
-
     public float speed = 8;
     public Vector2[] vecArray = new Vector2[4];
     public int waitMin = 2;
@@ -157,29 +155,30 @@ public class NPC_Interaction : MonoBehaviour
                     {
 
                         //anim.CrossFade("oldWoman_Idle", 0);
-                        anim.CrossFade(animations[0], 0);
+                        anim.CrossFade(animations[1], 0);
                         StartCoroutine("MoveDestManager");
 
                     }
                 }
 
-
-
             }
    
-
         }
-
      
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         GameObject otherGO = other.gameObject;
-        //Debug.Log(other);
-        if(otherGO.name == "Jawsh")
+        Debug.Log(other);
+        if (otherGO.name == "Jawsh")
         {
             isInRange = true;
+        }
+        else if ((otherGO.tag == "marriedLady") && (this.tag == "youngBoy"))
+        {
+            NPC_Interaction nInt = otherGO.GetComponent<NPC_Interaction>();
+            nInt.triggered = true;
         }
     }
 
@@ -195,6 +194,7 @@ public class NPC_Interaction : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        Debug.Log(other);
         GameObject otherGO = other.gameObject;
         //Debug.Log(other);
         if(otherGO.name == "Jawsh")
@@ -222,7 +222,7 @@ public class NPC_Interaction : MonoBehaviour
     {
         float f = (int)Random.Range(waitMin, waitMax);
 
-        Debug.Log(f);
+//        Debug.Log(f);
 
         yield return new WaitForSeconds(f);
         position2 = gameObject.transform.position;

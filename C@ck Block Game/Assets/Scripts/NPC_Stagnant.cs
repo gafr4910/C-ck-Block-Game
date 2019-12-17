@@ -46,6 +46,10 @@ public class NPC_Stagnant : MonoBehaviour
     private Vector2 position2;
     private int index = 0;
     public bool triggered = false;
+    private int counter = 0;
+
+
+    public bool normalWomanTrigger = false;
 
 
     void Start()
@@ -75,16 +79,19 @@ public class NPC_Stagnant : MonoBehaviour
 		//Debug.Log(isInRange);
 		if (isInRange && Input.GetKeyDown(KeyCode.Space))
 		{
-			Debug.Log("yep");
-			//isPickedUp = true;
-			//this.gameObject.SetActive(false);
-			textbox.enabled = true;
-			text.enabled = true;
-			int rand = Random.Range(0, barks.Length);
-			text.text = barks[rand];
-			Invoke("ClearText", 5);
-			Debug.Log("1?");
-		}
+           
+                Debug.Log("yep");
+                //isPickedUp = true;
+                //this.gameObject.SetActive(false);
+                textbox.enabled = true;
+                text.enabled = true;
+                int rand = Random.Range(0, barks.Length);
+                text.text = barks[rand];
+                Invoke("ClearText", 5);
+                Debug.Log("1?");
+           
+
+        }
 
 		//if (target != position && !triggered)
 		//{
@@ -122,7 +129,7 @@ public class NPC_Stagnant : MonoBehaviour
 
 		if (triggered)
         {
-
+            speed = 15;
             //anim.CrossFade("Old_woman", 0);
             StopCoroutine("MoveManager");
 
@@ -154,10 +161,12 @@ public class NPC_Stagnant : MonoBehaviour
                     {
 
                         //anim.CrossFade("oldWoman_Idle", 0);
-                        anim.CrossFade(animations[0], 0);
+                        anim.CrossFade(animations[1], 0);
                         StartCoroutine("MoveDestManager");
 
                     }
+
+                    
                 }
 
 
@@ -178,7 +187,12 @@ public class NPC_Stagnant : MonoBehaviour
         {
             isInRange = true;
         }
+        else if((otherGO.tag == "marriedLady") &&  (this.tag == "youngBoy"))
+        {
+            triggered = true;
+        }
     }
+ 
 
     void OnTriggerExit2D(Collider2D other)
     {
@@ -219,7 +233,7 @@ public class NPC_Stagnant : MonoBehaviour
     {
         float f = (int)Random.Range(waitMin, waitMax);
 
-        Debug.Log(f);
+       // Debug.Log(f);
 
         yield return new WaitForSeconds(f);
         position2 = gameObject.transform.position;
