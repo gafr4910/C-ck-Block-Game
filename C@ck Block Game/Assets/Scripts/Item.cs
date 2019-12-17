@@ -33,11 +33,12 @@ public class Item : MonoBehaviour
             isPickedUp = true;
             //Sound
             source.PlayOneShot(Pickup, 1f);
-            Debug.Log("Picked Up Sound Play");
+            //Debug.Log("Picked Up Sound Play");
             
             //this.gameObject.SetActive(false);
             SpriteRenderer sprite = this.gameObject.GetComponent<SpriteRenderer>();
             sprite.enabled = false;
+            Debug.Log(sprite);
             BoxCollider2D bCol = this.gameObject.GetComponent<BoxCollider2D>();
             if(bCol)
             {
