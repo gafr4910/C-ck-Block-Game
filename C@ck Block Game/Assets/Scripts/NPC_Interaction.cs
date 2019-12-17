@@ -70,8 +70,10 @@ public class NPC_Interaction : MonoBehaviour
        // Debug.Log(positions[positions.Length]);
 
         target = ChooseDirection();
-        Debug.Log(target);
+        //Debug.Log(target);
         index = 0;
+
+        Debug.Log(animations.Length);
         //Debug.Log("Start");
     }
 
