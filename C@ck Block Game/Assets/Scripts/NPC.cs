@@ -190,6 +190,7 @@ public class NPC : MonoBehaviour
         yield return new WaitForSeconds(waitDestTime);
         index = 0;
         triggered = false;
+        position2 = gameObject.transform.position;
         StopCoroutine("MoveDestManager");
     }
 
