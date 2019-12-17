@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NPC : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class NPC : MonoBehaviour
     public bool mLTalked = false;
     public bool FakeProposalReady = false;
 
+    public Image winScreen;
 
     void Start()
     {
@@ -64,6 +66,10 @@ public class NPC : MonoBehaviour
 
     void Update()
     {
+        if(winScreen.enabled && Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Background 1");
+        }
         if(isInRange && Input.GetKeyDown(KeyCode.Space) && !FakeProposalReady)
         {
             textbox.enabled = true;
@@ -253,6 +259,8 @@ public class NPC : MonoBehaviour
         yield return new WaitForSeconds(2);
         buCounter++;
         text.text = BreakUpText[buCounter];
+        yield return new WaitForSeconds(2);
+        winScreen.enabled = true;
         StopCoroutine("BreakUp");
     }
 
