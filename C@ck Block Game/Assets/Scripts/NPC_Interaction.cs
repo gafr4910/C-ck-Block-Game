@@ -19,12 +19,13 @@ public class NPC_Interaction : MonoBehaviour
     public string[] barks;
 
     public float speed = 8;
-    public Vector2[] vecArray = new Vector2[4];
+    //public Vector2[] vecArray;
     public int waitMin = 2;
     public int waitMax = 4;
     public Vector2 dest;
     public Vector2 dest2;
     public Vector2[] positions;
+    public Vector2[] vecArray;
     public Vector2[] destinations;
     public int waitDestTime;
     public string[] animations;
@@ -50,7 +51,7 @@ public class NPC_Interaction : MonoBehaviour
     {
         textbox.enabled = false;
         text.enabled = false;
-        Debug.Log("Start?");
+        //Debug.Log("Start?");
         npcName = name;
 
         anim = GetComponent<Animator>();
@@ -62,13 +63,16 @@ public class NPC_Interaction : MonoBehaviour
 
         //ExitPosition = new Vector2(2, 2);
 
-        vecArray[0] = new Vector2(0f, 0f);
+        //vecArray[0] = new Vector2(0f, 0f);
 
         position = gameObject.transform.position;
-        target = ChooseDirection();
+        //Debug.Log(position);
+       // Debug.Log(positions[positions.Length]);
 
+        target = ChooseDirection();
+        Debug.Log(target);
         index = 0;
-        Debug.Log("Start");
+        //Debug.Log("Start");
     }
 
     void Update()
@@ -116,7 +120,8 @@ public class NPC_Interaction : MonoBehaviour
 
         else if (!triggered)
         {
-            anim.CrossFade(animations[1], 0);
+            //Debug.Log(animations[1]);
+            anim.CrossFade(animations[0], 0);
             StartCoroutine("MoveManager");
         }
 
@@ -170,7 +175,7 @@ public class NPC_Interaction : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         GameObject otherGO = other.gameObject;
-        Debug.Log(other);
+        //Debug.Log(this.tag);
         if (otherGO.name == "Jawsh")
         {
             isInRange = true;
@@ -194,7 +199,7 @@ public class NPC_Interaction : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log(other);
+        //Debug.Log(other);
         GameObject otherGO = other.gameObject;
         //Debug.Log(other);
         if(otherGO.name == "Jawsh")
@@ -226,8 +231,13 @@ public class NPC_Interaction : MonoBehaviour
 
         yield return new WaitForSeconds(f);
         position2 = gameObject.transform.position;
-        target = ChooseDirection();
-        StopCoroutine("MoveManager");
+
+       
+           target = ChooseDirection();
+           StopCoroutine("MoveManager");
+        
+  
+       
 
         //yield return null;
 
@@ -246,52 +256,22 @@ public class NPC_Interaction : MonoBehaviour
 
     public Vector2 ChooseDirection()
     {
-        System.Random ran = new System.Random();
-        int r = positions.Length;
 
-        int i = ran.Next(0, 4);
+        if (positions.Length>0)
+        {
+            int r = positions.Length;
+            int i = Random.Range(0, r);
 
-        //Vector2 temp = new Vector2();
-
-        int count = 0;
-
-
-        if (i == 0)
-        { 
-            vecArray[0] = positions[0];
-
-          
-            count = 0;
-
+            return positions[i];
+        }
+        //System.Random ran = new System.Random();
+       
+        else
+        {
+            return transform.position;
         }
 
-        else if (i == 1)
-        {
-           
-            vecArray[1] = positions[1];
-           
-            count = 1;
-
-
-        }
-        else if (i == 2)
-        {
-            
-            vecArray[2] = positions[2];
-            
-            count = 2;
-
-        }
-        else if (i == 3)
-        {
     
-
-            vecArray[3] = positions[3];
-            count = 3;
-
-        }
-
-        return vecArray[count];
 
     }
 

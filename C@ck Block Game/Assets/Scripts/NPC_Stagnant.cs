@@ -56,7 +56,7 @@ public class NPC_Stagnant : MonoBehaviour
     {
         textbox.enabled = false;
         text.enabled = false;
-        Debug.Log("Start?");
+        //Debug.Log("Start?");
         npcName = name;
 
         anim = GetComponent<Animator>();
@@ -71,7 +71,7 @@ public class NPC_Stagnant : MonoBehaviour
         target = ChooseDirection();
 
         index = 0;
-        Debug.Log("Start");
+        //Debug.Log("Start");
     }
 
     void Update()
@@ -80,7 +80,7 @@ public class NPC_Stagnant : MonoBehaviour
 		if (isInRange && Input.GetKeyDown(KeyCode.Space))
 		{
            
-                Debug.Log("yep");
+                //Debug.Log("yep");
                 //isPickedUp = true;
                 //this.gameObject.SetActive(false);
                 textbox.enabled = true;
@@ -88,7 +88,7 @@ public class NPC_Stagnant : MonoBehaviour
                 int rand = Random.Range(0, barks.Length);
                 text.text = barks[rand];
                 Invoke("ClearText", 5);
-                Debug.Log("1?");
+                //Debug.Log("1?");
            
 
         }
@@ -259,50 +259,55 @@ public class NPC_Stagnant : MonoBehaviour
     {
         System.Random ran = new System.Random();
         int r = positions.Length;
-
-        int i = ran.Next(0, 4);
+        
+        int i = ran.Next(0, r);
 
         //Vector2 temp = new Vector2();
 
         int count = 0;
 
-
-        if (i == 0)
-        {
-            vecArray[0] = positions[0];
-
-
-            count = 0;
-
-        }
-
-        else if (i == 1)
-        {
-
-            vecArray[1] = positions[1];
-
-            count = 1;
-
-
-        }
-        else if (i == 2)
-        {
-
-            vecArray[2] = positions[2];
-
-            count = 2;
-
-        }
-        else if (i == 3)
-        {
-
-
-            vecArray[3] = positions[3];
-            count = 3;
-
-        }
+        vecArray[r] = positions[r];
+        count = r;
 
         return vecArray[count];
+
+
+        //if (i == 0)
+        //{
+        //    vecArray[0] = positions[0];
+
+
+        //    count = 0;
+
+        //}
+
+        //else if (i == 1)
+        //{
+
+        //    vecArray[1] = positions[1];
+
+        //    count = 1;
+
+
+        //}
+        //else if (i == 2)
+        //{
+
+        //    vecArray[2] = positions[2];
+
+        //    count = 2;
+
+        //}
+        //else if (i == 3)
+        //{
+
+
+        //    vecArray[3] = positions[3];
+        //    count = 3;
+
+        //}
+
+   
 
     }
 

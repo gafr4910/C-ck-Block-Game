@@ -10,8 +10,11 @@ public class ItemController : MonoBehaviour
     public GameObject Jawsh;
     public GameObject Todd;
     public GameObject Linda;
+    public GameObject[] OperationCheatItems;
+    public GameObject[] OperationCheatNPCs;
 
-    private bool allPickedUp = true;
+    private bool allPickedUpFP = true;
+    private bool allPickedUpOC = true;
 
     void Update()
     {
@@ -33,11 +36,11 @@ public class ItemController : MonoBehaviour
             //Debug.Log(itemScript.isPickedUp);
             if(!itemScript.isPickedUp)
             {
-                allPickedUp = false;
+                allPickedUpFP = false;
                 //Debug.Log("Nay!");
             }
         }
-        if(allPickedUp)
+        if(allPickedUpFP)
         {
             GameObject t = GameObject.Find("Todd");
             Formal_script tAct= t.GetComponent<Formal_script>();
@@ -47,9 +50,33 @@ public class ItemController : MonoBehaviour
             lAct.triggered = true;
             //Debug.Log("yay!");
         }
-        else if(!allPickedUp)
+        else if(!allPickedUpFP)
         {
-            allPickedUp = true;
+            allPickedUpFP = true;
+        }
+
+        foreach (GameObject i in OperationCheatItems)
+        {
+            GameObject checkItem = GameObject.Find(i.name);
+            Item itemScript = checkItem.GetComponent<Item>();
+            //Debug.Log(itemScript.isPickedUp);
+            if (!itemScript.isPickedUp)
+            {
+                allPickedUpOC = false;
+                //Debug.Log("Nay!");
+            }
+        }
+        if (allPickedUpOC)
+        {
+            foreach(GameObject npc in OperationCheatNPCs)
+            {
+                NPC_Interaction nInt = npc.GetComponent<NPC_Interaction>();
+                nInt.triggered = true;
+            }
+        }
+        else if (!allPickedUpOC)
+        {
+            allPickedUpOC = true;
         }
     }
 }

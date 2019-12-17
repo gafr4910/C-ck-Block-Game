@@ -9,6 +9,9 @@ public class Item : MonoBehaviour
     public bool isInRange = false;
     public bool isPickedUp = false;
     public bool isDisguise = false;
+	public bool isRing = false;
+
+	private bool isVisible = false;
 
     //Sound Stuff
     public AudioClip Pickup;
@@ -22,12 +25,24 @@ public class Item : MonoBehaviour
     void Start()
     {
         itemName = name;
+        if(isRing)
+		{
+			SpriteRenderer sRend = this.gameObject.GetComponent<SpriteRenderer>();
+			sRend.enabled = false;
+			isVisible = false;
+		}
+        else
+		{
+            SpriteRenderer sRend = this.gameObject.GetComponent<SpriteRenderer>();
+			sRend.enabled = true;
+			isVisible = true;
+		}
     }
 
     void Update()
     {
         //Debug.Log(isInRange);
-        if(isInRange && Input.GetKeyDown(KeyCode.Space))
+        if(isInRange && isVisible && Input.GetKeyDown(KeyCode.Space))
         {
             //Debug.Log("yep");
             isPickedUp = true;
