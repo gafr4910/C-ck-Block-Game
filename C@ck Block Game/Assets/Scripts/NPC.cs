@@ -14,6 +14,8 @@ public class NPC : MonoBehaviour
     public string npcName;
     public bool isInRange = false;
     public string[] barks;
+    public string[] BreakUpText;
+    private int buCounter = 0;
 
     public float speed = 8;
     public int waitMin = 2;
@@ -62,7 +64,7 @@ public class NPC : MonoBehaviour
 
     void Update()
     {
-        if(isInRange && Input.GetKeyDown(KeyCode.Space))
+        if(isInRange && Input.GetKeyDown(KeyCode.Space) && !FakeProposalReady)
         {
             textbox.enabled = true;
             text.enabled = true;
@@ -78,11 +80,25 @@ public class NPC : MonoBehaviour
             {
                 mLTalked = true;
             }
+        }
 
-            if((tag == "Todd" || tag == "Linda") && FakeProposalReady)
+        if (isInRange && Input.GetKeyDown(KeyCode.Space) && (tag == "Todd" || tag == "Linda") && FakeProposalReady)
+        {
+            triggered = true;
+            if (tag == "Todd")
             {
-                triggered = true;
+                GameObject other = GameObject.Find("Linda");
+                NPC nScript = other.GetComponent<NPC>();
+                nScript.triggered = true;
             }
+            if (tag == "Linda")
+            {
+                GameObject other = GameObject.Find("Todd");
+                NPC nScript = other.GetComponent<NPC>();
+                nScript.triggered = true;
+            }
+
+            StartCoroutine("BreakUp");
         }
 
         if (target != position && !triggered)
@@ -223,7 +239,19 @@ public class NPC : MonoBehaviour
         StopCoroutine("MoveDestManager");
     }
 
-
+    public IEnumerator BreakUp()
+    {
+        text.enabled = true;
+        textbox.enabled = true;
+        text.text = BreakUpText[buCounter];
+        yield return new WaitForSeconds(2);
+        buCounter++;
+        text.text = BreakUpText[buCounter];
+        yield return new WaitForSeconds(2);
+        buCounter++;
+        text.text = BreakUpText[buCounter];
+        StopCoroutine("BreakUp");
+    }
 
     public Vector2 ChooseDirection()
     {
