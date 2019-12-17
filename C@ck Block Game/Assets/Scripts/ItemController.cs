@@ -84,11 +84,11 @@ public class ItemController : MonoBehaviour
         if(allPickedUpFP)
         {
             GameObject t = GameObject.Find("Todd");
-            Formal_script tAct= t.GetComponent<Formal_script>();
-            tAct.triggered = true;
+            NPC tAct= t.GetComponent<NPC>();
+            tAct.FakeProposalReady = true;
             GameObject l = GameObject.Find("Linda");
-            Linda_script lAct = l.GetComponent<Linda_script>();
-            lAct.triggered = true;
+            NPC lAct = l.GetComponent<NPC>();
+            lAct.FakeProposalReady = true;
             //Debug.Log("yay!");
         }
         else if(!allPickedUpFP)

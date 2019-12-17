@@ -33,6 +33,7 @@ public class NPC : MonoBehaviour
     public int mLTalkNum;
     public bool yBTalked = false;
     public bool mLTalked = false;
+    public bool FakeProposalReady = false;
 
 
     void Start()
@@ -76,6 +77,11 @@ public class NPC : MonoBehaviour
             if(tag == "marriedLady" && rand == mLTalkNum && !mLTalked)
             {
                 mLTalked = true;
+            }
+
+            if((tag == "Todd" || tag == "Linda") && FakeProposalReady)
+            {
+                triggered = true;
             }
         }
 
