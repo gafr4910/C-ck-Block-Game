@@ -100,23 +100,33 @@ public class ItemController : MonoBehaviour
         foreach (GameObject n in OperationCheatNPCs)
         {
             NPC npcScript = n.GetComponent<NPC>();
-            if(n.tag == "youngBoy" && npcScript.yBTalked)
+            if(n.tag == "youngBoy" && !npcScript.yBTalked)
             {
+                //Debug.Log("a");
                 bothTalkedTo = false;
             }
-            if(n.tag == "marriedLady" && npcScript.mLTalked)
+            if(n.tag == "marriedLady" && !npcScript.mLTalked)
             {
+                //Debug.Log("b");
                 bothTalkedTo = false;
             }
         }
-
+        //Debug.Log(bothTalkedTo);
         if(bothTalkedTo)
         {
             NPC npcScript = OperationCheatNPCs[0].GetComponent<NPC>();
+            //Debug.Log("here?");
             npcScript.triggered = true;
-            SpriteRenderer sr = OperationCheatItems[0].GetComponent<SpriteRenderer>();
-            sr.enabled = true;
+            Item iScript = OperationCheatItems[0].GetComponent<Item>();
+            iScript.isVisible = true;
+            if(!iScript.isPickedUp)
+            {
+                SpriteRenderer sr = OperationCheatItems[0].GetComponent<SpriteRenderer>();
+                sr.enabled = true;
+            }
         }
+
+        bothTalkedTo = true;
 
         foreach (GameObject i in OperationCheatItems)
         {

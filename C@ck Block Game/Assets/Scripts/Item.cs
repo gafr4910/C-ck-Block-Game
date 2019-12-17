@@ -11,7 +11,7 @@ public class Item : MonoBehaviour
     public bool isDisguise = false;
 	public bool isRing = false;
 
-	private bool isVisible = false;
+	public bool isVisible = false;
 
     //Sound Stuff
     public AudioClip Pickup;
@@ -76,7 +76,7 @@ public class Item : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         GameObject otherGO = other.gameObject;
-        Debug.Log(other);
+        //Debug.Log(other);
         if(otherGO.name == "Jawsh")
         {
             isInRange = true;
